@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         temporary();
     }
-
+//
     public static void temporary(){
       Scanner sc = new Scanner(System.in);
         Transaksi trx = new Transaksi();
