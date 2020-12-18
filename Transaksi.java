@@ -50,7 +50,7 @@ public class Transaksi
 
         this.kodeTransaksi = kodeTransaksi;
     }
-
+  
     /**
      * Method untuk menghitung total transaksi
      */
