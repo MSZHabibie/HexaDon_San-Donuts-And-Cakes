@@ -47,14 +47,14 @@ public class Transaksi
         this.kodeTransaksi = kodeTransaksi;
     }
 
-    public int totalTransaksi(int jumlahDonat, hargaDonat)
+    public int totalTransaksi(int jumlahDonat, int hargaDonat)
     {
       return jumlahDonat * hargaDonat;
     }
 
-    public int Kembalian(int jumlahUang, int hargaDonat)
+    public int Kembalian(int jumlahUang, int totalTransaksi)
     {
-        return jumlahUang - hargaDonat;
+        return jumlahUang - totalTransaksi;
     }
 
     public void preOrder(String kodeTransaksi)
