@@ -1,6 +1,6 @@
 /**
  * @author (Muhammad Syah Zichrullah Habibie (1908107010025))
- * @version (1.5)
+ * @version (1.0)
  */
 
 import java.util.Scanner;
