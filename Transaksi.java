@@ -47,6 +47,11 @@ public class Transaksi
         this.kodeTransaksi = kodeTransaksi;
     }
 
+    public int totalTransaksi(int jumlahDonat, hargaDonat)
+    {
+      return jumlahDonat * hargaDonat;
+    }
+
     public int Kembalian(int jumlahUang, int hargaDonat)
     {
         return jumlahUang - hargaDonat;

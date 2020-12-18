@@ -63,7 +63,7 @@ public class Main {
                         System.out.println("Anda Akan Membeli Donat Blueberry Seharga " + p.getHargaDonat());
                         break;
                 }
-
+                System.out.println("Masukkan Jumlah Dona = ");
                 System.out.println("Masukkan Jumlah Uang = ");
                 trx.setJumlahUang(sc.nextInt());
 
