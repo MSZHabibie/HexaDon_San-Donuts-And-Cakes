@@ -7,6 +7,7 @@ public class Bon {
     private String codeTransaksi;
     private int jumlahUang;
     private int kembalian;
+    private String nama;
 
     public Bon(){
 
@@ -14,6 +15,7 @@ public class Bon {
 
     public Bon(String codeTransaksi, int jumlahUang, int kembalian){
         this.codeTransaksi = codeTransaksi;
+        this.nama = nama;
         this.jumlahUang = jumlahUang;
         this.kembalian = kembalian;
     }
@@ -40,5 +42,13 @@ public class Bon {
 
     public int getKembalian(){
         return this.kembalian;
+    }
+  
+    public void setNama(String nama){
+        this.nama = nama;
+    }
+
+    public String getNama(){
+        return this.nama;
     }
 }
