@@ -20,7 +20,7 @@ public class Transaksi
 
     /**
      * Method untuk mereturn jumlah uang.
-     */
+     */ 
     public int getJumlahUang()
     {
         return jumlahUang;
@@ -66,15 +66,6 @@ public class Transaksi
     {
         return jumlahUang - totalTransaksi;
     }
-
-    /**
-     * Method untuk melakukan preorder.
-     */
-    public void preOrder(String kodeTransaksi)
-    {
-        Penyimpanan p = new Penyimpanan(0, "");
-        System.out.println("Pesanan : " + p.getNamaDonat());
-        System.out.print("Total Harga : " + p.getHargaDonat());
 
 
     }
