@@ -18,6 +18,7 @@ public class Pelayanan
     public void welcome()
     {
         Scanner in = new Scanner(System.in);
+        String nama = " ";
 
         System.out.println("\n\n\n");
         System.out.println("\t╰(*°▽°*)╯\t\t               WELCOME  \t\t\t╰(*°▽°*)╯");  
@@ -25,6 +26,11 @@ public class Pelayanan
         System.out.println("\t\t\t      ^_^\t SAN_DONUTSANDCAKES \t^_^");
         System.out.println("\t\t\t\t\t   🥯 🍩 🎂 🍰");
         System.out.println("\n\n\n");
+        System.out.print("Masukkan nama Anda : ");
+        nama = in.nextLine();
+
+        System.out.println("\n\nHai " + nama + " !\nSelamat datang di San Donuts And Cakes !\n");
+
         System.out.println("1. Promo");
         System.out.println("2. Donat");
         System.out.println("3. Dessert Box");
@@ -178,7 +184,7 @@ public class Pelayanan
         }
         else {
             //Masuk ke transaksi
-            pesanPenutup();
+            penutup();
         }
 
         in.close();
@@ -249,16 +255,16 @@ public class Pelayanan
         else {
             //Masuk ke transaksi
             t.fikrul();
-            pesanPenutup();
+            penutup();
         }
 
         in.close();
     }
 
-    public void pesanPenutup()
+    public void penutup()
     {
         //kasi kata kata yg keren dungz !
-        System.out.println("\nTerima kasih !\nDatang lagi yoo...\n");
+        System.out.println("\n\nTerima kasih !\nDatang lagi yoo...\n");
     }
 
 
