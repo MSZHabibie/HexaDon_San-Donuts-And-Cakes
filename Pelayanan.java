@@ -1,6 +1,6 @@
 /**
  * @author (M. Saifullah Sani)
- * @version (1.0)
+ * @version (22/12/2020)
  */
 
 import java.util.Scanner;
@@ -263,8 +263,16 @@ public class Pelayanan
 
     public void penutup()
     {
+        Scanner in = new Scanner(System.in);
+        String feedback;
+
+        System.out.println("Sebaris feedback dari Anda sangat kami harapkan !");
+        System.out.print("Feedback : ");
+        feedback = in.nextLine();
         //kasi kata kata yg keren dungz !
         System.out.println("\n\nTerima kasih !\nDatang lagi yoo...\n");
+
+        in.close();
     }
 
 
