@@ -13,6 +13,10 @@ public class Penyimpanan {
     protected HashMap<String, Integer> menuDessert;
     private int stok;
     private ArrayList<Bon> simpanBon;
+    private int promo = 0;
+    private int pemasukan;
+    private int modal;
+    private int untungrugi;
    // private Iterator<Bon> cetakBon;
 
     public Penyimpanan(){
