@@ -138,21 +138,21 @@ public class Pelayanan
             System.out.println("|\t\t   ______________________________\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   1. Tanpa toping ( " + stok + " )\t\t\t\t\t|");
+            System.out.println("|   1. Tanpa toping\t\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   2. Kacang ( " + stok + " )\t\t\t\t\t\t|");
+            System.out.println("|   2. Kacang\t\t\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   3. Kacang Almond ( " + stok + " )\t\t\t\t\t|");
+            System.out.println("|   3. Kacang Almond\t\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   4. Ceres ( " + stok + " )\t\t\t\t\t\t|");
+            System.out.println("|   4. Ceres\t\t\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   5. Crispy Ball Cokelat ( " + stok + " )\t\t\t\t|");
+            System.out.println("|   5. Crispy Ball Cokelat\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   6. Sprinkle Warna ( " + stok + " )\t\t\t\t\t|");
+            System.out.println("|   6. Sprinkle Warna\t\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   7. Meses Warna ( " + stok + " )\t\t\t\t\t|");
+            System.out.println("|   7. Meses Warna\t\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   8. Keju ( " + stok + " )\t\t\t\t\t\t|");
+            System.out.println("|   8. Keju\t\t\t\t\t\t\t|");
             System.out.println("|_______________________________________________________________|\n");
 
             for(int i = 1; i <= banyak; i++) {
@@ -287,4 +287,5 @@ public class Pelayanan
 
 
 }
+
 
