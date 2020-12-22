@@ -14,7 +14,6 @@ public class Penyimpanan {
     private int stok;
     private ArrayList<Bon> simpanBon;
    // private Iterator<Bon> cetakBon;
-   // private Bon b;
 
     public Penyimpanan(){
         //membuat HashMap
@@ -22,7 +21,13 @@ public class Penyimpanan {
         menuDessert = new HashMap<String, Integer>();
         //membuat ArrayList
         simpanBon = new ArrayList<Bon>();
-        // stok dan jenis donat
+       
+        setMenuDonat();
+        setMenuDessert();
+    }
+ 
+    // stok dan jenis donat
+    public void setMenuDonat(){
         menuDonat.put("Donat Gula", 5);
         menuDonat.put("Donat Coklat", 5);
         menuDonat.put("Donat Coklat Putih", 5);
@@ -36,7 +41,10 @@ public class Penyimpanan {
         menuDonat.put("Donat Bomboloni isi Blueberry", 5);
         menuDonat.put("Donat Selai Strawberry", 5);
         menuDonat.put("Donat Selai Bluberry", 5);
-        // stok dan jenis Dessert
+    }
+
+    // stok dan jenis Dessert
+    public void setMenuDessert(){
         menuDessert.put("Turkish", 5);
         menuDessert.put("Red Velvet", 5);
         menuDessert.put("Lotus", 5);
@@ -108,19 +116,44 @@ public class Penyimpanan {
     public void tambahBon(Bon temp){
         this.simpanBon.add(temp);
     }
+ 
+   //mengitung berapa kali pelanggan yang sama melakukan transaksi
+    public int cekLangganan(String nama){
+        this.cekBon = this.simpanBon.iterator();
+        while (cekBon.hasNext()){
+            Bon b = cekBon.next();
+            if (b.getNama().equalsIgnoreCase(nama)){
+                promo +=1;
+            }
+        }
+        return promo;
+    }
+ 
+    //menghitung total pemasukan
+    public void setPemasukan(int pemasukan){
+        this.pemasukan += pemasukan ;
+    }
 
-//    public void cetakBon(){
-//        this.cetakBon = this.simpanBon.iterator();
-//        while (cetakBon.hasNext()){
-//            Bon b = cetakBon.next();
-//            System.out.println("code transaksi: " + b.getCodeTransaksi() );
-//            System.out.println("jumlah uang: " + b.getJumlahUang());
-//            System.out.println("kembalian: " + b.getKembalian());
-//        }
-//    }
+    public void setModal(int modal){
+        this.modal = modal;
+    }
 
-//    public void cetakBon()
-//    {
-//        System.out.println("kode transaksi: " + b.getCodeTransaksi());
-//    }
+    // menghitung keuntungan atau kerugian toko
+    public String getUntungRugi(){
+        if (pemasukan>=modal){
+            untungrugi = pemasukan - modal;
+            return "keuntungan: " + untungrugi;
+        }else{
+            untungrugi = modal - pemasukan;
+            return "kerugian: " + untungrugi;
+        }
+    }
+
+    public int getPemasukan(){
+        return pemasukan;
+    }
+
+    public int getModal(){
+        return modal;
+    }
 }
