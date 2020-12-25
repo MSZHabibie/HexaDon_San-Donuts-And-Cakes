@@ -1,6 +1,6 @@
 /**
  * @author (M. Saifullah Sani)
- * @version (1.0)
+ * @version (22/12/2020)
  */
 
 import java.util.Scanner;
@@ -18,6 +18,7 @@ public class Pelayanan
     public void welcome()
     {
         Scanner in = new Scanner(System.in);
+        String nama = " ";
 
         System.out.println("\n\n\n");
         System.out.println("\t╰(*°▽°*)╯\t\t               WELCOME  \t\t\t╰(*°▽°*)╯");  
@@ -25,6 +26,11 @@ public class Pelayanan
         System.out.println("\t\t\t      ^_^\t SAN_DONUTSANDCAKES \t^_^");
         System.out.println("\t\t\t\t\t   🥯 🍩 🎂 🍰");
         System.out.println("\n\n\n");
+        System.out.print("Masukkan nama Anda : ");
+        nama = in.nextLine();
+
+        System.out.println("\n\nHai " + nama + " !\nSelamat datang di San Donuts And Cakes !\n");
+
         System.out.println("1. Promo");
         System.out.println("2. Donat");
         System.out.println("3. Dessert Box");
@@ -132,21 +138,21 @@ public class Pelayanan
             System.out.println("|\t\t   ______________________________\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   1. Tanpa toping ( " + stok + " )\t\t\t\t\t|");
+            System.out.println("|   1. Tanpa toping\t\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   2. Kacang ( " + stok + " )\t\t\t\t\t\t|");
+            System.out.println("|   2. Kacang\t\t\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   3. Kacang Almond ( " + stok + " )\t\t\t\t\t|");
+            System.out.println("|   3. Kacang Almond\t\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   4. Ceres ( " + stok + " )\t\t\t\t\t\t|");
+            System.out.println("|   4. Ceres\t\t\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   5. Crispy Ball Cokelat ( " + stok + " )\t\t\t\t|");
+            System.out.println("|   5. Crispy Ball Cokelat\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   6. Sprinkle Warna ( " + stok + " )\t\t\t\t\t|");
+            System.out.println("|   6. Sprinkle Warna\t\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   7. Meses Warna ( " + stok + " )\t\t\t\t\t|");
+            System.out.println("|   7. Meses Warna\t\t\t\t\t\t|");
             System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   8. Keju ( " + stok + " )\t\t\t\t\t\t|");
+            System.out.println("|   8. Keju\t\t\t\t\t\t\t|");
             System.out.println("|_______________________________________________________________|\n");
 
             for(int i = 1; i <= banyak; i++) {
@@ -178,7 +184,7 @@ public class Pelayanan
         }
         else {
             //Masuk ke transaksi
-            pesanPenutup();
+            penutup();
         }
 
         in.close();
@@ -249,16 +255,24 @@ public class Pelayanan
         else {
             //Masuk ke transaksi
             t.fikrul();
-            pesanPenutup();
+            penutup();
         }
 
         in.close();
     }
 
-    public void pesanPenutup()
+    public void penutup()
     {
+        Scanner in = new Scanner(System.in);
+        String feedback;
+
+        System.out.println("Sebaris feedback dari Anda sangat kami harapkan !");
+        System.out.print("Feedback : ");
+        feedback = in.nextLine();
         //kasi kata kata yg keren dungz !
-        System.out.println("\nTerima kasih !\nDatang lagi yoo...\n");
+        System.out.println("\n\nTerima kasih !\nDatang lagi yoo...\n");
+
+        in.close();
     }
 
 
@@ -273,4 +287,5 @@ public class Pelayanan
 
 
 }
+
 
