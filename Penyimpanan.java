@@ -3,57 +3,56 @@
  * @version (1.0)
  */
  
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.HashMap;
 //import java.util.Iterator;
 
 public class Penyimpanan {
-
-    protected HashMap<String, Integer> menuDonat;
-    protected HashMap<String, Integer> menuDessert;
+ 
+ private HashMap<String, Integer> menuDonat;
+    private HashMap<String, Integer> menuDessert;
     private int stok;
-    private ArrayList<Bon> simpanBon;
-    private int promo = 0;
+    private HashMap<String,Bon> simpanBon;
+    //private Iterator<Bon> cekBon;
     private int pemasukan;
     private int modal;
     private int untungrugi;
-   // private Iterator<Bon> cetakBon;
+
 
     public Penyimpanan(){
         //membuat HashMap
         menuDonat = new HashMap<String, Integer>();
         menuDessert = new HashMap<String, Integer>();
-        //membuat ArrayList
-        simpanBon = new ArrayList<Bon>();
-       
+        simpanBon = new HashMap<String,Bon>();
+
         setMenuDonat();
         setMenuDessert();
     }
- 
+
     // stok dan jenis donat
     public void setMenuDonat(){
-        menuDonat.put("Donat Gula", 5);
-        menuDonat.put("Donat Coklat", 5);
-        menuDonat.put("Donat Coklat Putih", 5);
-        menuDonat.put("Donat Matcha", 5);
-        menuDonat.put("Donat Strawberry", 5);
-        menuDonat.put("Donat Blueberry", 5);
-        menuDonat.put("Donat Tiramisu", 5);
-        menuDonat.put("Donat Cappuchino", 5);
-        menuDonat.put("Donat Bomboloni isi Coklat", 5);
-        menuDonat.put("Donat Bomboloni isi Strawberry", 5);
-        menuDonat.put("Donat Bomboloni isi Blueberry", 5);
-        menuDonat.put("Donat Selai Strawberry", 5);
-        menuDonat.put("Donat Selai Bluberry", 5);
+        menuDonat.put("Donat Gula", 20);
+        menuDonat.put("Donat Coklat", 20);
+        menuDonat.put("Donat Coklat Putih", 20);
+        menuDonat.put("Donat Matcha", 20);
+        menuDonat.put("Donat Strawberry", 20);
+        menuDonat.put("Donat Blueberry", 20);
+        menuDonat.put("Donat Tiramisu", 20);
+        menuDonat.put("Donat Cappuchino", 20);
+        menuDonat.put("Donat Bomboloni isi Coklat", 20);
+        menuDonat.put("Donat Bomboloni isi Strawberry", 20);
+        menuDonat.put("Donat Bomboloni isi Blueberry", 20);
+        menuDonat.put("Donat Selai Strawberry", 20);
+        menuDonat.put("Donat Selai Bluberry", 20);
     }
 
     // stok dan jenis Dessert
     public void setMenuDessert(){
-        menuDessert.put("Turkish", 5);
-        menuDessert.put("Red Velvet", 5);
-        menuDessert.put("Lotus", 5);
-        menuDessert.put("Chocolate", 5);
-        menuDessert.put("Cadburry", 5);
+        menuDessert.put("Turkish", 20);
+        menuDessert.put("Red Velvet", 20);
+        menuDessert.put("Lotus", 20);
+        menuDessert.put("Chocolate", 20);
+        menuDessert.put("Cadburry", 20);
     }
 
 
@@ -90,14 +89,15 @@ public class Penyimpanan {
     // pengurangan Stok Dessert
     public void kurangiStokDessert(String Dessert, int x){
         for(String i : menuDessert.keySet()) {
-            if(i.equals(Dessert)) {
+            if (i.equals(Dessert)) {
                 Integer a = menuDessert.get(i) - x;
-                menuDessert.replace(i,a);
+                menuDessert.replace(i, a);
             }
         }
-
+        //promo += x;
     }
 
+    //mengecek jumlah stok dessert
     public int cekStokDessert(String Dessert){
         for(String i : menuDessert.keySet()) {
             if (i.equals(Dessert)) {
@@ -107,6 +107,7 @@ public class Penyimpanan {
         return stok;
     }
 
+    //mengecek jumlah stok donat
     public int cekStokDonat(String Donat){
         for(String i : menuDonat.keySet()) {
             if (i.equals(Donat)) {
@@ -117,22 +118,10 @@ public class Penyimpanan {
         return stok;
     }
 
-    public void tambahBon(Bon temp){
-        this.simpanBon.add(temp);
+    public void tambahBon(String kodeTransaksi, Bon temp){
+        this.simpanBon.put(kodeTransaksi,temp);
     }
- 
-   //mengitung berapa kali pelanggan yang sama melakukan transaksi
-    public int cekLangganan(String nama){
-        this.cekBon = this.simpanBon.iterator();
-        while (cekBon.hasNext()){
-            Bon b = cekBon.next();
-            if (b.getNama().equalsIgnoreCase(nama)){
-                promo +=1;
-            }
-        }
-        return promo;
-    }
- 
+
     //menghitung total pemasukan
     public void setPemasukan(int pemasukan){
         this.pemasukan += pemasukan ;
@@ -159,5 +148,16 @@ public class Penyimpanan {
 
     public int getModal(){
         return modal;
+    }
+
+
+    public void cetakBon(String kdTransaksi){
+        for (String i : simpanBon.keySet()) {
+            if (i.equalsIgnoreCase(kdTransaksi)) {
+                //String key = i.toString();
+                String value = simpanBon.get(i).toString();
+                System.out.println("kode Transaksi: " + i + " " + value);
+            }
+        }
     }
 }
