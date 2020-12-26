@@ -3,12 +3,14 @@
  * @version (1.0)
  */
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Transaksi
 {
     private int jumlahUang;
     private String kodeTransaksi;
-
-
+  
     /**
      * Method constructor tanpa parameter
      */
@@ -20,7 +22,8 @@ public class Transaksi
 
     /**
      * Method untuk mereturn jumlah uang.
-     */ 
+     */
+
     public int getJumlahUang()
     {
         return jumlahUang;
@@ -50,7 +53,7 @@ public class Transaksi
 
         this.kodeTransaksi = kodeTransaksi;
     }
-  
+
     /**
      * Method untuk menghitung total transaksi
      */
@@ -67,6 +70,13 @@ public class Transaksi
         return jumlahUang - totalTransaksi;
     }
 
-
+     /**
+     * Method untuk mereturn date
+     */
+    public String getDate()
+    {
+        Date date = new Date();
+        SimpleDateFormat df = new SimpleDateFormat("E, dd.MM.yyy | hh.mm.ss a");
+        return df.format(date);
     }
 }
