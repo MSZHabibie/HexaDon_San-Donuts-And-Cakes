@@ -10,7 +10,7 @@ public class Transaksi
 {
     private int jumlahUang;
     private String kodeTransaksi;
-
+  
     /**
      * Method constructor tanpa parameter
      */
@@ -23,6 +23,7 @@ public class Transaksi
     /**
      * Method untuk mereturn jumlah uang.
      */
+
     public int getJumlahUang()
     {
         return jumlahUang;

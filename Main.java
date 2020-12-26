@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         temporary();
     }
-
+//
     public static void temporary(){
       Scanner sc = new Scanner(System.in);
         Transaksi trx = new Transaksi();
@@ -63,14 +63,18 @@ public class Main {
                         System.out.println("Anda Akan Membeli Donat Blueberry Seharga " + p.getHargaDonat());
                         break;
                 }
-
+                System.out.println("Masukkan Jumlah Donat = ");
+                int total = sc.nextInt();
+                trx.totalTransaksi(total, p.getHargaDonat());
                 System.out.println("Masukkan Jumlah Uang = ");
                 trx.setJumlahUang(sc.nextInt());
 
                 System.out.println("Kode Transaksi : " + trx.getKodeTransaksi());
-                System.out.println("Jumlah Uang Anda " + trx.getJumlahUang());
-                System.out.println("Kembalian : " + trx.Kembalian(trx.getJumlahUang(), p.getHargaDonat()));
-                System.out.println("\nTerimakasih, ditunggu next order.\n");
+                System.out.println("Jumlah Uang Anda : " + trx.getJumlahUang());
+                System.out.println("Jumlah Pembelian : " + p.getNamaDonat() + " Sebanyak " + total + " Donat");
+                System.out.println("Total Harga : " + trx.totalTransaksi(total, p.getHargaDonat()));
+                System.out.println("Kembalian : " + trx.Kembalian(trx.getJumlahUang(), trx.totalTransaksi(total, p.getHargaDonat())));
+                System.out.println("Terimakasih, ditunggu next order.\n");
 
             } else if (menu == 2) {
                 System.out.println("Terimakasih telah melakukan preorder.");
