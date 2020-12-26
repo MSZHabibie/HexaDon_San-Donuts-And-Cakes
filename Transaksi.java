@@ -3,11 +3,13 @@
  * @version (1.0)
  */
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Transaksi
 {
     private int jumlahUang;
     private String kodeTransaksi;
-
 
     /**
      * Method constructor tanpa parameter
@@ -67,15 +69,10 @@ public class Transaksi
         return jumlahUang - totalTransaksi;
     }
 
-    /**
-     * Method untuk melakukan preorder.
-     */
-    public void preOrder(String kodeTransaksi)
+    public String getDate()
     {
-        Penyimpanan p = new Penyimpanan(0, "");
-        System.out.println("Pesanan : " + p.getNamaDonat());
-        System.out.print("Total Harga : " + p.getHargaDonat());
-
-
+        Date date = new Date();
+        SimpleDateFormat df = new SimpleDateFormat("E, dd.MM.yyy | hh.mm.ss a");
+        return df.format(date);
     }
 }
