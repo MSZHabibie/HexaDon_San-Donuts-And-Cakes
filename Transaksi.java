@@ -69,6 +69,9 @@ public class Transaksi
         return jumlahUang - totalTransaksi;
     }
 
+     /**
+     * Method untuk mereturn date
+     */
     public String getDate()
     {
         Date date = new Date();
