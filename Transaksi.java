@@ -124,7 +124,7 @@ public class Transaksi
 
     public void Bon()
     {
-        System.out.println(\tgetDate());
+        System.out.println(getDate());
         System.out.println("Kode Transaksi = " + getKodeTransaksi());
         System.out.println("Nama = " + getNama());
         System.out.println("Jumlah Uang " + getJumlahUang());
