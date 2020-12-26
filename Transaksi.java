@@ -9,21 +9,27 @@ import java.util.Date;
 public class Transaksi
 {
     private int jumlahUang;
+    private int harga;
+    private int jumlah;
     private String kodeTransaksi;
-  
+    private String nama;
+
     /**
      * Method constructor tanpa parameter
      */
     public Transaksi()
     {
         jumlahUang = 0;
+        harga = 0;
+        jumlah = 0;
         kodeTransaksi = "";
+        nama = "";
+
     }
 
     /**
      * Method untuk mereturn jumlah uang.
      */
-
     public int getJumlahUang()
     {
         return jumlahUang;
@@ -37,12 +43,32 @@ public class Transaksi
         this.jumlahUang = jumlahUang;
     }
 
+    public int getHarga()
+    {
+        return harga;
+    }
+
+    public void setHarga(int harga)
+    {
+        this.harga = harga;
+    }
+
+    public int getJumlah()
+    {
+        return jumlah;
+    }
+
+    public void setJumlah(int jumlah)
+    {
+        this.jumlah = jumlah;
+    }
+
     /**
-     * Method untuk mendapatkan kode transaksi
+     * Method untuk mengembalikan kode transaksi
      */
     public String getKodeTransaksi()
     {
-        return "Don" + (int) (1 + (Math.random() * (10000 + 1)));
+        return kodeTransaksi;
     }
 
     /**
@@ -54,23 +80,42 @@ public class Transaksi
         this.kodeTransaksi = kodeTransaksi;
     }
 
+    public String buatKodeTransaksi()
+    {
+        return "Don" + (int) (1 + (Math.random() * (10000 + 1)));
+    }
+
+    public String getNama()
+    {
+        return nama;
+    }
+
+    public void setNama(String nama)
+    {
+        this.nama = nama;
+    }
+
     /**
      * Method untuk menghitung total transaksi
      */
-    public int totalTransaksi(int jumlahDonat, int hargaDonat)
+    public int totalTransaksi()
     {
-        return jumlahDonat * hargaDonat;
+        return jumlah * harga;
     }
 
     /**
      * Method untuk menghitung uang kembalian
      */
-    public int Kembalian(int jumlahUang, int totalTransaksi)
+    public void Kembalian()
     {
-        return jumlahUang - totalTransaksi;
+        if(jumlahUang >= totalTransaksi()) {
+            System.out.println(jumlahUang - totalTransaksi());
+        } else {
+            System.out.println("Maaf Uang Anda Kurang");
+        }
     }
 
-     /**
+    /**
      * Method untuk mereturn date
      */
     public String getDate()
@@ -79,4 +124,6 @@ public class Transaksi
         SimpleDateFormat df = new SimpleDateFormat("E, dd.MM.yyy | hh.mm.ss a");
         return df.format(date);
     }
+
 }
+
