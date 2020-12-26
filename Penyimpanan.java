@@ -12,12 +12,12 @@ public class Penyimpanan {
  private HashMap<String, Integer> menuDonat;
     private HashMap<String, Integer> menuDessert;
     private int stok;
+
     private HashMap<String,Bon> simpanBon;
     //private Iterator<Bon> cekBon;
     private int pemasukan;
     private int modal;
     private int untungrugi;
-
 
     public Penyimpanan(){
         //membuat HashMap
