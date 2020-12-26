@@ -51,7 +51,7 @@ public class Pelayanan
             System.out.println("\nKami punya promo ...\n");
             
             // press any key to continue
-            // welcome();
+            welcome();
         }
         else if(pilihan == 2) {
             menuDonat();
@@ -183,6 +183,14 @@ public class Pelayanan
             welcome();
         }
         else {
+            Penyimpanan simpan = new Penyimpanan();
+            Transaksi bayar = new Transaksi();
+
+            simpan.kurangiStokDonat(Donat, x);
+            simpan.kurangiStokDessert(Dessert, x);
+
+            bayar.setJumlahUang(jumlahUang);
+            bayar.totalTransaksi(jumlahDonat, hargaDonat);
             //Masuk ke transaksi
             penutup();
         }
