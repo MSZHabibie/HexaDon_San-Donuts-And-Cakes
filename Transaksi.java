@@ -1,6 +1,6 @@
 /**
  * @author (Fikrul Akhyar)
- * @version (1.0)
+ * @version (5.0)
  */
 
 import java.text.SimpleDateFormat;
@@ -40,7 +40,7 @@ public class Transaksi
      */
     public void setJumlahUang(int jumlahUang)
     {
-        this.jumlahUang = jumlahUang;
+        this.jumlahUang += jumlahUang;
     }
 
     public int getHarga()
@@ -105,14 +105,11 @@ public class Transaksi
 
     /**
      * Method untuk menghitung uang kembalian
+     * @return
      */
-    public void Kembalian()
+    public int Kembalian()
     {
-        if(jumlahUang >= totalTransaksi()) {
-            System.out.println(jumlahUang - totalTransaksi());
-        } else {
-            System.out.println("Maaf Uang Anda Kurang");
-        }
+        return jumlahUang - totalTransaksi();
     }
 
     /**
@@ -123,6 +120,16 @@ public class Transaksi
         Date date = new Date();
         SimpleDateFormat df = new SimpleDateFormat("E, dd.MM.yyy | hh.mm.ss a");
         return df.format(date);
+    }
+
+    public void Bon()
+    {
+        System.out.println(\tgetDate());
+        System.out.println("Kode Transaksi = " + getKodeTransaksi());
+        System.out.println("Nama = " + getNama());
+        System.out.println("Jumlah Uang " + getJumlahUang());
+        System.out.println("Total = " + totalTransaksi());
+        System.out.println("Kembalian =  " + Kembalian());
     }
 
 }
