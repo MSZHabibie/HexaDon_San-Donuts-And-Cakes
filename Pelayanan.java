@@ -19,7 +19,6 @@ public class Pelayanan
     {
         Scanner in = new Scanner(System.in);
         String nama = " ";
-        int kembali = 1;
 
         System.out.println("\n\n\n");
         System.out.println("\t╰(*°▽°*)╯\t\t               WELCOME  \t\t\t╰(*°▽°*)╯");  
@@ -28,11 +27,21 @@ public class Pelayanan
         System.out.println("\t\t\t\t\t   🥯 🍩 🎂 🍰");
         System.out.println("\n\n\n");
         System.out.print("Masukkan nama Anda : ");
-        in.nextLine();
+        //in.nextLine();
         nama = in.nextLine();
 
-        System.out.println("\n\nHai " + nama + " !\nSelamat datang di San Donuts And Cakes !\n");
+        System.out.println("\n\nHai " + nama + " !\nSelamat datang di San Donuts And Cakes !");
+        menuUtama();
 
+        in.close();
+    }
+
+    public void menuUtama()
+    {
+        Scanner in = new Scanner(System.in);
+        int kembali = 1;
+
+        System.out.println("\nMenu utama :");
         System.out.println("1. Promo");
         System.out.println("2. Donat");
         System.out.println("3. Dessert Box");
@@ -47,31 +56,31 @@ public class Pelayanan
             pilihan = in.nextInt();
         }
         
-
         if(pilihan == 1) {
             //promo
             System.out.println("\nKami punya promo ...\n");
-            System.out.println("Input 1 untuk kembali ke menu awal !");
+            System.out.print("Input 1 untuk kembali ke menu awal ! ");
             kembali = in.nextInt();
 
             while(kembali != 1) {
-                System.out.println("\nMaaf, mohon input 1 !");
+                System.out.print("\nMaaf, mohon input 1 ! ");
                 kembali = in.nextInt();
             }
-            welcome();
+            menuUtama();
         }
         else if(pilihan == 2) {
-            menuDonat(in);
+            menuDonat();
         }
         else if(pilihan == 3) {
-            menuDB(in);
+            menuDB();
         }
-        
+
         in.close();
     }
 
-    public void menuDonat(Object in)
+    public void menuDonat()
     {
+        Scanner in = new Scanner(System.in);
         int stok = 5;
         int banyak = 0;
         int pilihanDonat = 0;
@@ -132,7 +141,7 @@ public class Pelayanan
 
             if(banyak > stok) {
                 System.out.println("Maaf, stok tidak tersedia !\n\n");
-                menuDonat(in);
+                menuDonat();
             }
         }        
 
@@ -190,12 +199,15 @@ public class Pelayanan
         }
         else {
             //Masuk ke transaksi
-            penutup(in);
+            penutup();
         }
+
+        in.close();
     }
 
-    public void menuDB(Object in)
+    public void menuDB()
     {
+        Scanner in = new Scanner(System.in);
         int stok = 5;
         int banyak = 0;
         int pilihanDB = 0;
@@ -253,17 +265,20 @@ public class Pelayanan
         }
 
         if(beliLain == 'y' || beliLain == 'Y') {
-            menuDB(in);
+            menuDB();
         }
         else {
             //Masuk ke transaksi
             //t.fikrul();
-            penutup(in);
+            penutup();
         }
+
+        in.close();
     }
 
-    public void penutup(Object in)
+    public void penutup()
     {
+        Scanner in = new Scanner(System.in);
         String feedback;
 
         System.out.println("Sebaris feedback dari Anda sangat kami harapkan !");
@@ -272,6 +287,8 @@ public class Pelayanan
         feedback = in.nextLine();
         //kasi kata kata yg keren dungz !
         System.out.println("\n\nTerima kasih !\nDatang lagi yoo...\n");
+
+        in.close();
     }
 
 
@@ -286,6 +303,7 @@ public class Pelayanan
 
 
 }
+
 
 
 
