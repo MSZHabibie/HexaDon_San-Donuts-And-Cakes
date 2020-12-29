@@ -5,6 +5,8 @@
 
 import java.util.Scanner;
 
+import java.util.Scanner;
+
 public class Pelayanan
 {
 
@@ -31,6 +33,13 @@ public class Pelayanan
         nama = in.nextLine();
 
         System.out.println("\n\nHai " + nama + " !\nSelamat datang di San Donuts And Cakes !");
+
+        System.out.println("Press enter to continue...");
+            try {
+                System.in.read();
+            }
+            catch(Exception e) {}
+            
         menuUtama();
 
         in.close();
@@ -60,6 +69,14 @@ public class Pelayanan
         if(pilihan == 1) {
             //promo
             System.out.println("\nKami punya promo ...\n");
+
+            System.out.println("Press enter to continue...");
+            try {
+                System.in.read();
+            }
+            catch(Exception e) {}
+
+            /*
             System.out.print("Input 1 untuk kembali ke menu awal ! ");
             kembali = in.nextInt();
 
@@ -67,6 +84,7 @@ public class Pelayanan
                 System.out.print("\nMaaf, mohon input 1 ! ");
                 kembali = in.nextInt();
             }
+            */
             menuUtama();
         }
         else if(pilihan == 2) {
@@ -75,6 +93,9 @@ public class Pelayanan
         else if(pilihan == 3) {
             menuDB();
         }
+
+        // kuarangi stok ke menu transaksi
+        // cek promo. Klo dpt promo, panggil class promo
 
         System.out.print("Masukkan uang Anda : ");
         uang = in.nextInt();
@@ -315,6 +336,7 @@ public class Pelayanan
 
 
 }
+
 
 
 
