@@ -40,6 +40,7 @@ public class Pelayanan
     {
         Scanner in = new Scanner(System.in);
         int kembali = 1;
+        int uang = 0;
 
         System.out.println("\nMenu utama :");
         System.out.println("1. Promo");
@@ -75,50 +76,57 @@ public class Pelayanan
             menuDB();
         }
 
+        System.out.print("Masukkan uang Anda : ");
+        uang = in.nextInt();
+
         in.close();
     }
 
     public void menuDonat()
     {
         Scanner in = new Scanner(System.in);
-        int stok = 5;
         int banyak = 0;
         int pilihanDonat = 0;
         int pilihanToping = 0;
         char beliLain = 'n';
 
-        System.out.println(" _______________________________________________________________");
-        System.out.println("|   📝 \t\t\t    San's Donuts \t\t 🍩   |");
-        System.out.println("|\t\t              Menu Utama \t\t\t|");
-        System.out.println("|\t\t   ______________________________\t\t|");
-        System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   1. Donat Gula ( " + stok + " )\t\t\t\t    Rp 2.000    |");
-        System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   2. Donat Cokelat ( " + stok + " )\t\t\t    Rp 2.500    |");
-        System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   3. Donat Cokelat Putih ( " + stok + " )\t\t    Rp 2.500    |");
-        System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   4. Donat Matcha ( " + stok + " )\t\t\t    Rp 2.500    |");
-        System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   5. Donat Strawberry ( " + stok + " )\t\t\t    Rp 2.500    |");
-        System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   6. Donat Blueberry ( " + stok + " )\t\t\t    Rp 2.500    |");
-        System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   7. Donat Tiramisu ( " + stok + " )\t\t\t    Rp 2.500    |");
-        System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   8. Donat Cappuchino ( " + stok + " )\t\t\t    Rp 2.500    |");
-        System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   9. Donat Bomboloni Isi Cokelat ( " + stok + " )\t    Rp 3.000    |");
-        System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   10. Donat Bomboloni Isi Strawberry ( " + stok + " )\t    Rp 3.000    |");
-        System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   11. Donat Bomboloni Isi Blueberry ( " + stok + " )\t    Rp 3.000    |");
-        System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   12. Donat Selai Strawberry ( " + stok + " )\t\t    Rp 3.000    |");
-        System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   13. Donat Selai Blueberry ( " + stok + " )\t\t    Rp 3.000    |");
-        System.out.println("|_______________________________________________________________|");
+        System.out.println(" ___________________________________________________________________");
+        System.out.println("|   📝 \t\t\t      San's Donuts\t\t     🍩   |");
+        System.out.println("|\t\t                Menu Donat\t\t\t    |");
+        System.out.println("|\t\t     ______________________________\t\t    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|\t\tMenu\t\t\t\tStok\t  Harga\t    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        
+        int stok = 5;
+        
+        System.out.println("|   1. Donat Gula\t\t\t\t " + stok + "\tRp 2.000    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   2. Donat Cokelat\t\t\t\t " + stok + "\tRp 2.500    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   3. Donat Cokelat Putih\t\t\t " + stok + "\tRp 2.500    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   4. Donat Matcha\t\t\t\t " + stok + "\tRp 2.500    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   5. Donat Strawberry\t\t\t\t " + stok + "\tRp 2.500    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   6. Donat Blueberry\t\t\t\t " + stok + "\tRp 2.500    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   7. Donat Tiramisu\t\t\t\t " + stok + "\tRp 2.500    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   8. Donat Cappuchino\t\t\t\t " + stok + "\tRp 2.500    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   9. Donat Bomboloni Isi Cokelat\t\t " + stok + "\tRp 3.000    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   10. Donat Bomboloni Isi Strawberry\t\t " + stok + "\tRp 3.000    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   11. Donat Bomboloni Isi Blueberry\t\t " + stok + "\tRp 3.000    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   12. Donat Selai Strawberry\t\t\t " + stok + "\tRp 3.000    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   13. Donat Selai Blueberry\t\t\t " + stok + "\tRp 3.000    |");
+        System.out.println("|___________________________________________________________________|");
         
         System.out.println("\nPilih 0 untuk kembali ke tampilan awal !");
         System.out.print("Pilihan Anda : ");
@@ -133,7 +141,7 @@ public class Pelayanan
 
 
         if(pilihanDonat == 0) {
-            welcome();
+            menuUtama();
         }
         else if(pilihanDonat >= 1 && pilihanDonat <= 13) {
             System.out.print("\nBanyak donat jenis ini yang ingin dibeli : ");
@@ -195,7 +203,7 @@ public class Pelayanan
         }
 
         if(beliLain == 'y' || beliLain == 'Y') {
-            welcome();
+            menuUtama();
         }
         else {
             //Masuk ke transaksi
@@ -208,26 +216,30 @@ public class Pelayanan
     public void menuDB()
     {
         Scanner in = new Scanner(System.in);
-        int stok = 5;
         int banyak = 0;
         int pilihanDB = 0;
         char beliLain = 'n';
 
         System.out.println(" _______________________________________________________________");
         System.out.println("|   📝 \t\t\t    San's Dessert Box \t\t 🍩   |");
-        System.out.println("|\t\t                   Menu \t\t\t|");
+        System.out.println("|\t\t              Menu Dessert Box\t\t\t|");
         System.out.println("|\t\t   ______________________________\t\t|");
         System.out.println("|\t\t\t\t\t\t\t\t|");
         System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   1. Turkish ( " + stok + " )\t\t\t\t    Rp 35.000   |");
+        System.out.println("|\tMenu\t\t\tStok\t\t\tHarga\t|");
         System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   2. Red Velvet ( " + stok + " )\t\t\t\t    Rp 35.000   |");
+
+        int stok = 5;
+
+        System.out.println("|   1. Turkish\t\t\t " + stok + "\t\t    Rp 35.000   |");
         System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   3. Lotus ( " + stok + " )\t\t\t\t    Rp 35.000   |");
+        System.out.println("|   2. Red Velvet\t\t " + stok + "\t\t    Rp 35.000   |");
         System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   4. Chocolate ( " + stok + " )\t\t\t\t    Rp 35.000   |");
+        System.out.println("|   3. Lotus\t\t\t " + stok + "\t\t    Rp 35.000   |");
         System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   5. Cadburry ( " + stok + " )\t\t\t\t    Rp 35.000   |");
+        System.out.println("|   4. Chocolate\t\t " + stok + "\t\t    Rp 35.000   |");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   5. Cadburry\t\t\t " + stok + "\t\t    Rp 35.000   |");
         System.out.println("|_______________________________________________________________|");
 
         System.out.println("\nPilih 0 untuk kembali ke tampilan awal !");
@@ -243,7 +255,7 @@ public class Pelayanan
 
 
         if(pilihanDB == 0) {
-            welcome();
+            menuUtama();
         }
         else if(pilihanDB >= 1 && pilihanDB <= 5) {
             System.out.print("\nBanyak Dessert Box jenis ini yang ingin dibeli : ");
@@ -303,6 +315,7 @@ public class Pelayanan
 
 
 }
+
 
 
 
