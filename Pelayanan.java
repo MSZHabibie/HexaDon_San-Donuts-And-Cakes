@@ -9,12 +9,14 @@ public class Pelayanan
 {
     private static Transaksi transaksi;
     private static Scanner in;
+    private static int biaya;
 
 
     public Pelayanan()
     {
         transaksi = new Transaksi();
         in = new Scanner(System.in);
+        biaya = 0;
     }
 
     public void welcome()
@@ -40,9 +42,6 @@ public class Pelayanan
 
     public void menuUtama()
     {
-        int kembali = 1;
-        int uang = 0;
-
         System.out.println("\nMenu utama :");
         System.out.println("1. Promo");
         System.out.println("2. Donat");
@@ -68,15 +67,6 @@ public class Pelayanan
             }
             catch(Exception e) {}
 
-            /*
-            System.out.print("Input 1 untuk kembali ke menu awal ! ");
-            kembali = in.nextInt();
-
-            while(kembali != 1) {
-                System.out.print("\nMaaf, mohon input 1 ! ");
-                kembali = in.nextInt();
-            }
-            */
             menuUtama();
         }
         else if(pilihan == 2) {
@@ -88,13 +78,10 @@ public class Pelayanan
 
         // kuarangi stok ke menu transaksi
         // cek promo. Klo dpt promo, panggil class promo
+        // kirim var biaya ke Transaksi
 
         System.out.print("Masukkan uang Anda : ");
-        uang = in.nextInt();
-        
-        /*
-        transaksi.setJumlahUang(uang);
-        */
+        transaksi.setJumlahUang(in.nextInt());
     }
 
     public void menuDonat()
@@ -165,8 +152,18 @@ public class Pelayanan
                 System.out.println("Maaf, stok tidak tersedia !\n\n");
                 menuDonat();
             }
-        }        
-
+        }       
+        
+        if(pilihanDonat == 1) {
+            biaya += banyak * 2000;
+        }
+        else if(pilihanDonat >= 2 && pilihanDonat <= 8) {
+            biaya += banyak * 2500;
+        }
+        else {
+            biaya += banyak * 3000;
+        }
+ 
 
         if(pilihanDonat >= 2 && pilihanDonat <= 8) {
             System.out.println(" _______________________________________________________________");
@@ -218,10 +215,6 @@ public class Pelayanan
 
         if(beliLain == 'y' || beliLain == 'Y') {
             menuUtama();
-        }
-        else {
-            //Masuk ke transaksi
-            penutup();
         }
     }
 
@@ -277,6 +270,8 @@ public class Pelayanan
             }
         }
 
+        biaya += banyak * 35000;
+
         //Apa mw beli yg lain ?
         System.out.print("\n\nApa Anda ingin membeli yang lain lagi ? (y/n) : ");
         beliLain = in.next().charAt(0);
@@ -288,14 +283,23 @@ public class Pelayanan
         }
 
         if(beliLain == 'y' || beliLain == 'Y') {
-            menuDB();
-        }
-        else {
-            //Masuk ke transaksi
-            //t.fikrul();
-            penutup();
+            menuUtama();
         }
     }
+
+    /*
+    Cetak Bon
+
+    public void Bon()
+    {
+        System.out.println(getDate());
+        System.out.println("Kode Transaksi = " + getKodeTransaksi());
+        System.out.println("Nama = " + getNama());
+        System.out.println("Jumlah Uang " + getJumlahUang());
+        System.out.println("Total = " + totalTransaksi());
+        System.out.println("Kembalian =  " + Kembalian());
+    }
+    */
 
     public void penutup()
     {
@@ -321,6 +325,7 @@ public class Pelayanan
 
 
 }
+
 
 
 
