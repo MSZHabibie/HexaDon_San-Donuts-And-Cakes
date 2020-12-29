@@ -1,6 +1,6 @@
 /**
  * @author (M. Saifullah Sani)
- * @version (22/12/2020)
+ * @version (29/12/2020)
  */
 
 import java.util.Scanner;
@@ -78,7 +78,7 @@ public class Pelayanan
 
         // kuarangi stok ke menu transaksi
         // cek promo. Klo dpt promo, panggil class promo
-        // kirim var biaya ke Transaksi
+        // setelah kalkulasi promo, kirim var biaya ke Transaksi untuk bon
 
         System.out.println("Total biaya belanjaan Anda : Rp. " + biaya);
         System.out.print("Masukkan uang Anda         : Rp. ");
@@ -322,7 +322,6 @@ public class Pelayanan
 
         System.out.println("Sebaris feedback dari Anda sangat kami harapkan !");
         System.out.print("Feedback : ");
-        in.nextLine();
         feedback = in.nextLine();
         //kasi kata kata yg keren dungz !
         System.out.println("\n\nTerima kasih !\nDatang lagi yoo...\n");
@@ -340,6 +339,7 @@ public class Pelayanan
 
 
 }
+
 
 
 
