@@ -5,49 +5,41 @@
 
 import java.util.Scanner;
 
-import java.util.Scanner;
-
 public class Pelayanan
 {
-
+    private static Transaksi transaksi;
+    private static Scanner in;
 
 
     public Pelayanan()
     {
-
+        transaksi = new Transaksi();
+        in = new Scanner(System.in);
     }
 
     public void welcome()
     {
-        Scanner in = new Scanner(System.in);
-        String nama = " ";
-
         System.out.println("\n\n\n");
         System.out.println("\t╰(*°▽°*)╯\t\t               WELCOME  \t\t\t╰(*°▽°*)╯");  
         System.out.println("\t\t   (☞ﾟヮﾟ)☞\t                 TO\t\t      ☜(ﾟヮﾟ☜)");  
         System.out.println("\t\t\t      ^_^\t SAN_DONUTSANDCAKES \t^_^");
         System.out.println("\t\t\t\t\t   🥯 🍩 🎂 🍰");
         System.out.println("\n\n\n");
-        System.out.print("Masukkan nama Anda : ");
-        //in.nextLine();
-        nama = in.nextLine();
-
-        System.out.println("\n\nHai " + nama + " !\nSelamat datang di San Donuts And Cakes !");
+        System.out.print("Masukkan nama Anda : ");;
+        transaksi.setNama(in.nextLine());
+        System.out.println("\n\nHai " + transaksi.getNama() + " !\nSelamat datang di San Donuts And Cakes !");
 
         System.out.println("Press enter to continue...");
             try {
                 System.in.read();
             }
             catch(Exception e) {}
-            
-        menuUtama();
 
-        in.close();
+        menuUtama();
     }
 
     public void menuUtama()
     {
-        Scanner in = new Scanner(System.in);
         int kembali = 1;
         int uang = 0;
 
@@ -99,13 +91,14 @@ public class Pelayanan
 
         System.out.print("Masukkan uang Anda : ");
         uang = in.nextInt();
-
-        in.close();
+        
+        /*
+        transaksi.setJumlahUang(uang);
+        */
     }
 
     public void menuDonat()
     {
-        Scanner in = new Scanner(System.in);
         int banyak = 0;
         int pilihanDonat = 0;
         int pilihanToping = 0;
@@ -230,13 +223,10 @@ public class Pelayanan
             //Masuk ke transaksi
             penutup();
         }
-
-        in.close();
     }
 
     public void menuDB()
     {
-        Scanner in = new Scanner(System.in);
         int banyak = 0;
         int pilihanDB = 0;
         char beliLain = 'n';
@@ -305,13 +295,10 @@ public class Pelayanan
             //t.fikrul();
             penutup();
         }
-
-        in.close();
     }
 
     public void penutup()
     {
-        Scanner in = new Scanner(System.in);
         String feedback;
 
         System.out.println("Sebaris feedback dari Anda sangat kami harapkan !");
@@ -320,8 +307,6 @@ public class Pelayanan
         feedback = in.nextLine();
         //kasi kata kata yg keren dungz !
         System.out.println("\n\nTerima kasih !\nDatang lagi yoo...\n");
-
-        in.close();
     }
 
 
@@ -336,6 +321,7 @@ public class Pelayanan
 
 
 }
+
 
 
 
