@@ -80,8 +80,23 @@ public class Pelayanan
         // cek promo. Klo dpt promo, panggil class promo
         // kirim var biaya ke Transaksi
 
-        System.out.print("Masukkan uang Anda : ");
+        System.out.println("Total biaya belanjaan Anda : Rp. " + biaya);
+        System.out.print("Masukkan uang Anda         : Rp. ");
         transaksi.setJumlahUang(in.nextInt());
+
+        while(transaksi.getJumlahUang() - biaya < 0) {
+            System.out.println("Maaf, nominal uang yang Anda masukkan kurang sejumlah Rp. " + (transaksi.getJumlahUang() - biaya));
+            System.out.print("Masukkan tambahan uang : Rp. ");
+            transaksi.setJumlahUang(in.nextInt());
+
+            if(transaksi.getJumlahUang() - biaya == 0) {
+                penutup();
+            }
+            else {
+                System.out.println("Kembalian Anda             : Rp. " + (transaksi.getJumlahUang() - biaya));
+                penutup();
+            }
+        }
     }
 
     public void menuDonat()
@@ -325,6 +340,7 @@ public class Pelayanan
 
 
 }
+
 
 
 
