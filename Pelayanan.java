@@ -19,6 +19,7 @@ public class Pelayanan
     {
         Scanner in = new Scanner(System.in);
         String nama = " ";
+        int kembali = 1;
 
         System.out.println("\n\n\n");
         System.out.println("\t╰(*°▽°*)╯\t\t               WELCOME  \t\t\t╰(*°▽°*)╯");  
@@ -27,6 +28,7 @@ public class Pelayanan
         System.out.println("\t\t\t\t\t   🥯 🍩 🎂 🍰");
         System.out.println("\n\n\n");
         System.out.print("Masukkan nama Anda : ");
+        in.nextLine();
         nama = in.nextLine();
 
         System.out.println("\n\nHai " + nama + " !\nSelamat datang di San Donuts And Cakes !\n");
@@ -49,23 +51,27 @@ public class Pelayanan
         if(pilihan == 1) {
             //promo
             System.out.println("\nKami punya promo ...\n");
-            
-            // press any key to continue
-            // welcome();
+            System.out.println("Input 1 untuk kembali ke menu awal !");
+            kembali = in.nextInt();
+
+            while(kembali != 1) {
+                System.out.println("\nMaaf, mohon input 1 !");
+                kembali = in.nextInt();
+            }
+            welcome();
         }
         else if(pilihan == 2) {
-            menuDonat();
+            menuDonat(in);
         }
         else if(pilihan == 3) {
-            menuDB();
+            menuDB(in);
         }
         
         in.close();
     }
 
-    public void menuDonat()
-    { 
-        Scanner in = new Scanner(System.in);
+    public void menuDonat(Object in)
+    {
         int stok = 5;
         int banyak = 0;
         int pilihanDonat = 0;
@@ -126,7 +132,7 @@ public class Pelayanan
 
             if(banyak > stok) {
                 System.out.println("Maaf, stok tidak tersedia !\n\n");
-                menuDonat();
+                menuDonat(in);
             }
         }        
 
@@ -184,15 +190,12 @@ public class Pelayanan
         }
         else {
             //Masuk ke transaksi
-            penutup();
+            penutup(in);
         }
-
-        in.close();
     }
 
-    public void menuDB()
+    public void menuDB(Object in)
     {
-        Scanner in = new Scanner(System.in);
         int stok = 5;
         int banyak = 0;
         int pilihanDB = 0;
@@ -250,29 +253,25 @@ public class Pelayanan
         }
 
         if(beliLain == 'y' || beliLain == 'Y') {
-            menuDB();
+            menuDB(in);
         }
         else {
             //Masuk ke transaksi
-            t.fikrul();
-            penutup();
+            //t.fikrul();
+            penutup(in);
         }
-
-        in.close();
     }
 
-    public void penutup()
+    public void penutup(Object in)
     {
-        Scanner in = new Scanner(System.in);
         String feedback;
 
         System.out.println("Sebaris feedback dari Anda sangat kami harapkan !");
         System.out.print("Feedback : ");
+        in.nextLine();
         feedback = in.nextLine();
         //kasi kata kata yg keren dungz !
         System.out.println("\n\nTerima kasih !\nDatang lagi yoo...\n");
-
-        in.close();
     }
 
 
@@ -287,5 +286,6 @@ public class Pelayanan
 
 
 }
+
 
 
