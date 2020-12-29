@@ -29,7 +29,7 @@ public class Pelayanan
         transaksi.setNama(in.nextLine());
         System.out.println("\n\nHai " + transaksi.getNama() + " !\nSelamat datang di San Donuts And Cakes !");
 
-        System.out.println("Press enter to continue...");
+        System.out.print("\nPress enter to continue...");
             try {
                 System.in.read();
             }
@@ -62,7 +62,7 @@ public class Pelayanan
             //promo
             System.out.println("\nKami punya promo ...\n");
 
-            System.out.println("Press enter to continue...");
+            System.out.print("Press enter to continue...");
             try {
                 System.in.read();
             }
@@ -321,6 +321,7 @@ public class Pelayanan
 
 
 }
+
 
 
 
