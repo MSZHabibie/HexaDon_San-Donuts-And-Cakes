@@ -1,71 +1,54 @@
-import java.util.Scanner;
+
 /**
  * @author (Sausan Nabilah)
- * @version (1.0)
+ * @version (30/12/20)
  */
 
-public class Promo{
+import java.util.Scanner;
+
+public class Promo extends Pelayanan
+{
 
     Public Promo()
     {
-
-    }
-
-    public void menudessert()
-    {
-        Scanner in = new Scanner(System.in);
-        
-        System.out.println(" _______________________________________________________");
-        System.out.println("|   📝 \t\t    San's Dessert Box \t\t 🍩   |");
-        System.out.println("|\t                    Menu \t\t\t|");
-        System.out.println("|\t        _________________________\t\t|");
-        System.out.println("|\t\t\t\t\t\t\t|");
-        System.out.println("|\t\t\t\t\t\t\t|");
-        System.out.println("|   1. Turkish\t\t\t\t    Rp 35.000   |");
-        System.out.println("|\t\t\t\t\t\t\t|");
-        System.out.println("|   2. Red Velvet\t\t\t    Rp 35.000   |");
-        System.out.println("|\t\t\t\t\t\t\t|");
-        System.out.println("|   3. Lotus\t\t\t\t    Rp 35.000   |");
-        System.out.println("|\t\t\t\t\t\t\t|");
-        System.out.println("|   4. Chocolate\t\t\t    Rp 35.000   |");
-        System.out.println("|\t\t\t\t\t\t\t|");
-        System.out.println("|   5. Cadburry\t\t\t\t    Rp 35.000   |");
-        System.out.println("|_______________________________________________________|");
-
-        System.out.print("\nPilihan 1: ");
-        System.out.print("\nPilihan 2: ");
-        System.out.print("\nPilihan 3: ");
-        int pilihanD = in.nextInt();
-
-        in.close();
-    }
+          Super();
+    }  
     
-    public void diskon()
+    public void Beranda()
     {
-        Scanner in = new Scanner(System.in);
+         System.out.println(" ============== Promo yang kami miliki adalah : =============");
+         System.out.println(" ||                                                        ||");
+         System.out.println(" || *> Beli 3 dessert dox dapat 5 donat gratis             ||");
+         System.out.println(" || *> Potongan harga 25k dengan minimum transaksi 150k    ||");
+         System.out.println(" ||                                                        ||");
+         System.out.println(" ============================================================");
     }
-    public static void main (String[] args)
-   {
-        Scanner in = new Scanner(System.in);
-        Promo p = new Promo();
 
-        System.out.println("Promo San Donuts And Cakes");
-        System.out.println("Promo hari ini adalah :");
-        System.out.println("1. Buy 3 Dessert Box Get 5 Donuts");
-        System.out.println("2. Birthday Diskon (5%)");
+    public void promoDB()
+    {
+          Scanner p = new Scanner (System.in);     
+          int pilihanDonat = 0;
 
-        System.out.print("\nPilihan Anda : ");
-        int pilihan = in.nextInt();
+          System.out.println(" Selamat anda mendapatkan promo beli 3 dessert box dapat 5 donat gratis!! ");
+          System.out.println(" Silahkan pilih 5 donat yang anda inginkan! \n\n");
+          //super.menuDonat();
+          System.out.println("Pilihan donat 1 :");
+          pilihanDonat = p.nextInt();
+          System.out.println("Pilihan donat 2 :");
+          pilihanDonat = p.nextInt();
+          System.out.println("Pilihan donat 3 :");
+          pilihanDonat = p.nextInt();
+          System.out.println("Pilihan donat 4 :");
+          pilihanDonat = p.nextInt();
+          System.out.println("Pilihan donat 5 :");
+          pilihanDonat = p.nextInt();
+    }
 
-        if(pilihan == 1) {
-            p.menudessert();
-        }
-    //else if(pilihan == 2) {
-        //   p.menuDonat();
-   }
-
-
-    
-
+    public void persen(int biaya)
+    {
+          System.out.println(" Selamat anda mendapatkan promo potongan harga sebesar 25k dengan transaksi min. 150k  ");
+          System.out.println(" Total biaya belanja anda adalah : " + (biaya - 25000));
+            
+    }
 }
     
