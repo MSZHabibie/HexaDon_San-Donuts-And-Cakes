@@ -106,15 +106,17 @@ public class Pelayanan
         System.out.print("Masukkan uang Anda         : Rp. ");
         transaksi.setJumlahUang(in.nextInt());
 
+        // Meminta tambahan uang ketika uang yang dimasukkan kurang dari total biaya belanjaan
         while(transaksi.getJumlahUang() - transaksi.getBiaya() < 0) {
             System.out.println("\nMaaf, nominal uang yang Anda masukkan kurang sejumlah Rp. " + (transaksi.getJumlahUang() - transaksi.getBiaya()));
-            System.out.print("Masukkan tambahan uang : Rp. ");
+            System.out.print("Masukkan tambahan uang                                  : Rp. ");
             transaksi.setJumlahUang(in.nextInt());
         }
 
         // Kembalian
         System.out.println("\nKembalian Anda             : Rp. " + transaksi.kembalian());
         penutup();
+        cetakBon();
     }
 
     public void menuDonat()
@@ -220,7 +222,7 @@ public class Pelayanan
             if(banyak > stok) {
                 // Klo stok gk tersedia sebanyak diinginkan, lalu balik ke menu donat
                 System.out.println("Maaf, stok tidak tersedia !\n\n");
-                menuDonat();
+                pilihDonat();
             }
         } 
 
@@ -314,26 +316,13 @@ public class Pelayanan
             if(banyak > stok) {
                 // Klo stok gk tersedia sebanyak diinginkan, lalu balik ke menu dessert box
                 System.out.println("Maaf, stok tidak tersedia !");
-                menuDB();
+                pilihDB();
             }
         }
 
         // Menghitung total biaya belanjaan dessert box
         transaksi.tambahBiaya(banyak, 35000);
     }
-
-    /*
-    Cetak Bon
-    public void Bon()
-    {
-        System.out.println(getDate());
-        System.out.println("Kode Transaksi = " + getKodeTransaksi());
-        System.out.println("Nama = " + getNama());
-        System.out.println("Jumlah Uang " + getJumlahUang());
-        System.out.println("Total = " + totalTransaksi());
-        System.out.println("Kembalian =  " + Kembalian());
-    }
-    */
 
     public void penutup()
     {
@@ -344,6 +333,18 @@ public class Pelayanan
         feedback = input.nextLine();
         //kasi kata kata yg keren dungz !
         System.out.println("\n\nTerima kasih !\nDatang lagi yoo...\n");
+    }
+
+    public void cetakBon()
+    {
+        System.out.println("\n\n    =========== BON ===========\n");
+        System.out.println("   " + transaksi.getDate() + "\n");
+        System.out.println("Kode Transaksi          : " + transaksi.getKodeTransaksi());
+        System.out.println("Nama pelanggan          : " + transaksi.getNama());
+        System.out.println("Total biaya belanjaan   : " + transaksi.getBiaya());
+        System.out.println("Jumlah uang             : " + transaksi.getJumlahUang());
+        System.out.println("Kembalian               : " + transaksi.kembalian());
+        System.out.println("\n\n");
     }
 
 
