@@ -24,6 +24,7 @@ public class Pelayanan
 
     public void welcome()
     {
+        // Tampilan pembuka
         System.out.println("\n\n\n");
         System.out.println("\t╰(*°▽°*)╯\t\t               WELCOME  \t\t\t╰(*°▽°*)╯");  
         System.out.println("\t\t   (☞ﾟヮﾟ)☞\t                 TO\t\t      ☜(ﾟヮﾟ☜)");  
@@ -34,6 +35,7 @@ public class Pelayanan
         transaksi.setNama(in.nextLine());
         System.out.println("\n\nHai " + transaksi.getNama() + " !\nSelamat datang di San Donuts And Cakes !");
 
+        // Tekan enter untuk lanjut ke Main menu
         System.out.print("\nPress enter to continue...");
             try {
                 System.in.read();
@@ -45,6 +47,9 @@ public class Pelayanan
 
     public void menuUtama()
     {
+        char beliLain = 'n';
+
+        // Main menu
         System.out.println("\nMenu utama :");
         System.out.println("1. Promo");
         System.out.println("2. Donat");
@@ -53,7 +58,7 @@ public class Pelayanan
         System.out.print("\nPilihan Anda : ");
         int pilihan = in.nextInt();
 
-        //Exception handling
+        // Exception handling Main menu
         while(pilihan < 1 || pilihan > 3) {
             System.out.println("\nMaaf, mohon pilih antara 1-3 !");
             System.out.print("Pilihan Anda : ");
@@ -61,9 +66,10 @@ public class Pelayanan
         }
         
         if(pilihan == 1) {
-            //promo
+            // Panggil list promo dr class Promo
             System.out.println("\nKami punya promo ...\n");
 
+            // Tekan enter untuk balik ke Main menu
             System.out.print("Press enter to continue...");
             try {
                 System.in.read();
@@ -79,10 +85,25 @@ public class Pelayanan
             menuDB();
         }
 
-        // kuarangi stok ke menu transaksi
+        // Apa mw beli yg lain ?
+        System.out.print("\n\nApa Anda ingin membeli yang lain lagi ? (y/n) : ");
+        beliLain = in.next().charAt(0);
+
+        while(beliLain != 'y' && beliLain != 'Y' && beliLain != 'n' && beliLain != 'N') {
+            System.out.println("\nMohon input y atau n !");
+            System.out.print("Apa Anda ingin membeli yang lain lagi ? (y/n) : ");
+            beliLain = in.next().charAt(0);
+        }
+
+        if(beliLain == 'y' || beliLain == 'Y') {
+            menuUtama();
+        }
+
+        // kuarangi stok ke penyimpanan
         // cek promo. Klo dpt promo, panggil class promo
         // setelah kalkulasi promo, kirim var biaya ke Transaksi untuk bon
 
+        // Peoses transaksi sampe kembalian
         System.out.println("\nTotal biaya belanjaan Anda : Rp. " + biaya);
         System.out.print("Masukkan uang Anda         : Rp. ");
         transaksi.setJumlahUang(in.nextInt());
@@ -93,17 +114,14 @@ public class Pelayanan
             transaksi.setJumlahUang(in.nextInt());
         }
 
+        // Kembalian
         System.out.println("\nKembalian Anda             : Rp. " + (transaksi.getJumlahUang() - biaya));
         penutup();
     }
 
     public void menuDonat()
     {
-        int banyak = 0;
-        int pilihanDonat = 0;
-        int pilihanToping = 0;
-        char beliLain = 'n';
-
+        // Tampilan daftar menu donat
         System.out.println(" ___________________________________________________________________");
         System.out.println("|   📝 \t\t\t      San's Donuts\t\t     🍩   |");
         System.out.println("|\t\t                Menu Donat\t\t\t    |");
@@ -141,12 +159,49 @@ public class Pelayanan
         System.out.println("|\t\t\t\t\t\t\t\t    |");
         System.out.println("|   13. Donat Selai Blueberry\t\t\t " + stok + "\tRp 3.000    |");
         System.out.println("|___________________________________________________________________|");
-        
+    }
+
+    public void topingDonat()
+    {
+        // Tampilan daftar toping untuk donat nomor 2 sampai 8
+        System.out.println(" _______________________________________________________________");
+        System.out.println("|   📝 \t\t\t    San's Donuts \t\t 🍩   |");
+        System.out.println("|\t\t              Menu Toping \t\t\t|");
+        System.out.println("|\t\t   ______________________________\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   1. Tanpa toping\t\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   2. Kacang\t\t\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   3. Kacang Almond\t\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   4. Ceres\t\t\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   5. Crispy Ball Cokelat\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   6. Sprinkle Warna\t\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   7. Meses Warna\t\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   8. Keju\t\t\t\t\t\t\t|");
+        System.out.println("|_______________________________________________________________|\n");
+    }
+
+    public void pilihDonat()
+    {        
+        int banyak = 0;
+        int pilihanDonat = 0;
+        int pilihanToping = 0;
+
+        // Menampilkan tampilan daftar menu donat
+        menuDonat();
+
         System.out.println("\nPilih 0 untuk kembali ke tampilan awal !");
         System.out.print("Pilihan Anda : ");
         pilihanDonat = in.nextInt();
 
-        //Exception handling
+        // Exception handling pemilihan menu donat
         while(pilihanDonat < 0 || pilihanDonat > 13) {
             System.out.println("\nMohon pilih antara 0-13 !");
             System.out.print("Pilihan Anda : ");
@@ -155,18 +210,22 @@ public class Pelayanan
 
 
         if(pilihanDonat == 0) {
+            // Balik ke Main menu
             menuUtama();
         }
         else if(pilihanDonat >= 1 && pilihanDonat <= 13) {
+            // Banyak donat ini yang ingin dibeli
             System.out.print("\nBanyak donat jenis ini yang ingin dibeli : ");
             banyak = in.nextInt();
 
             if(banyak > stok) {
+                // Klo stok gk tersedia sebanyak diinginkan, lalu balik ke menu donat
                 System.out.println("Maaf, stok tidak tersedia !\n\n");
                 menuDonat();
             }
         }       
         
+        // Hitung total biaya belanjaan donat
         if(pilihanDonat == 1) {
             biaya += banyak * 2000;
         }
@@ -178,36 +237,17 @@ public class Pelayanan
         }
  
 
+        // Pilih toping untuk donat tertentu
         if(pilihanDonat >= 2 && pilihanDonat <= 8) {
-            System.out.println(" _______________________________________________________________");
-            System.out.println("|   📝 \t\t\t    San's Donuts \t\t 🍩   |");
-            System.out.println("|\t\t              Menu Toping \t\t\t|");
-            System.out.println("|\t\t   ______________________________\t\t|");
-            System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   1. Tanpa toping\t\t\t\t\t\t|");
-            System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   2. Kacang\t\t\t\t\t\t\t|");
-            System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   3. Kacang Almond\t\t\t\t\t\t|");
-            System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   4. Ceres\t\t\t\t\t\t\t|");
-            System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   5. Crispy Ball Cokelat\t\t\t\t\t|");
-            System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   6. Sprinkle Warna\t\t\t\t\t\t|");
-            System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   7. Meses Warna\t\t\t\t\t\t|");
-            System.out.println("|\t\t\t\t\t\t\t\t|");
-            System.out.println("|   8. Keju\t\t\t\t\t\t\t|");
-            System.out.println("|_______________________________________________________________|\n");
+            // Menampilkan tampilan daftar toping untuk donat nomor 2 sampai 8
+            topingDonat();
 
             for(int i = 1; i <= banyak; i++) {
                 System.out.println();
                 System.out.print("Toping untuk donat " + i + " : ");
                 pilihanToping = in.nextInt();
 
-                //Exception handling
+                // Exception handling pemilihan toping
                 while(pilihanToping < 1 || pilihanToping > 8) {
                     System.out.println("\nMohon pilih antara 1-8 !");
                     System.out.print("Pilihan Anda : ");
@@ -215,28 +255,11 @@ public class Pelayanan
                 }
             }
         }
-
-        //Apa mw beli yg lain ?
-        System.out.print("\n\nApa Anda ingin membeli yang lain lagi ? (y/n) : ");
-        beliLain = in.next().charAt(0);
-
-        while(beliLain != 'y' && beliLain != 'Y' && beliLain != 'n' && beliLain != 'N') {
-            System.out.println("\nMohon input y atau n !");
-            System.out.print("Apa Anda ingin membeli yang lain lagi ? (y/n) : ");
-            beliLain = in.next().charAt(0);
-        }
-
-        if(beliLain == 'y' || beliLain == 'Y') {
-            menuUtama();
-        }
     }
 
     public void menuDB()
     {
-        int banyak = 0;
-        int pilihanDB = 0;
-        char beliLain = 'n';
-
+        // Tampilan daftar menu dessert box
         System.out.println(" _______________________________________________________________");
         System.out.println("|   📝 \t\t\t    San's Dessert Box \t\t 🍩   |");
         System.out.println("|\t\t              Menu Dessert Box\t\t\t|");
@@ -258,12 +281,21 @@ public class Pelayanan
         System.out.println("|\t\t\t\t\t\t\t\t|");
         System.out.println("|   5. Cadburry\t\t\t " + stok + "\t\t    Rp 35.000   |");
         System.out.println("|_______________________________________________________________|");
+    }
+
+    public void pilihDB()
+    {
+        int banyak = 0;
+        int pilihanDB = 0;
+
+        // Menampilkan daftar tampilan menu dessert box
+        menuDB();
 
         System.out.println("\nPilih 0 untuk kembali ke tampilan awal !");
         System.out.print("Pilihan Anda : ");
         pilihanDB = in.nextInt();
 
-        //Exception handling
+        // Exception handling pemilihan menu dessert box
         while(pilihanDB < 0 || pilihanDB > 5) {
             System.out.println("\nMohon pilih antara 0-5 !");
             System.out.print("Pilihan Anda : ");
@@ -272,32 +304,23 @@ public class Pelayanan
 
 
         if(pilihanDB == 0) {
+            // Kembali ke main menu
             menuUtama();
         }
         else if(pilihanDB >= 1 && pilihanDB <= 5) {
+            // Banyak dessert box ini yang ingin dibeli
             System.out.print("\nBanyak Dessert Box jenis ini yang ingin dibeli : ");
             banyak = in.nextInt();
 
             if(banyak > stok) {
+                // Klo stok gk tersedia sebanyak diinginkan, lalu balik ke menu dessert box
                 System.out.println("Maaf, stok tidak tersedia !");
+                menuDB();
             }
         }
 
+        // Menghitung total biaya belanjaan dessert box
         biaya += banyak * 35000;
-
-        //Apa mw beli yg lain ?
-        System.out.print("\n\nApa Anda ingin membeli yang lain lagi ? (y/n) : ");
-        beliLain = in.next().charAt(0);
-
-        while(beliLain != 'y' && beliLain != 'Y' && beliLain != 'n' && beliLain != 'N') {
-            System.out.println("\nMohon input y atau n !");
-            System.out.print("Apa Anda ingin membeli yang lain lagi ? (y/n) : ");
-            beliLain = in.next().charAt(0);
-        }
-
-        if(beliLain == 'y' || beliLain == 'Y') {
-            menuUtama();
-        }
     }
 
     /*
