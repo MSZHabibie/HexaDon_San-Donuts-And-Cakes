@@ -1,6 +1,6 @@
 /**
  * @author (M. Saifullah Sani)
- * @version (29/12/2020)
+ * @version (31/12/2020)
  */
 
 import java.util.Scanner;
@@ -9,6 +9,7 @@ public class Pelayanan
 {
     private static Transaksi transaksi;
     private static Scanner in;
+    private static Scanner input;
     private static int biaya;
 
 
@@ -16,7 +17,9 @@ public class Pelayanan
     {
         transaksi = new Transaksi();
         in = new Scanner(System.in);
+        input = new Scanner(System.in);
         biaya = 0;
+        welcome();
     }
 
     public void welcome()
@@ -80,23 +83,18 @@ public class Pelayanan
         // cek promo. Klo dpt promo, panggil class promo
         // setelah kalkulasi promo, kirim var biaya ke Transaksi untuk bon
 
-        System.out.println("Total biaya belanjaan Anda : Rp. " + biaya);
+        System.out.println("\nTotal biaya belanjaan Anda : Rp. " + biaya);
         System.out.print("Masukkan uang Anda         : Rp. ");
         transaksi.setJumlahUang(in.nextInt());
 
         while(transaksi.getJumlahUang() - biaya < 0) {
-            System.out.println("Maaf, nominal uang yang Anda masukkan kurang sejumlah Rp. " + (transaksi.getJumlahUang() - biaya));
+            System.out.println("\nMaaf, nominal uang yang Anda masukkan kurang sejumlah Rp. " + (transaksi.getJumlahUang() - biaya));
             System.out.print("Masukkan tambahan uang : Rp. ");
             transaksi.setJumlahUang(in.nextInt());
-
-            if(transaksi.getJumlahUang() - biaya == 0) {
-                penutup();
-            }
-            else {
-                System.out.println("Kembalian Anda             : Rp. " + (transaksi.getJumlahUang() - biaya));
-                penutup();
-            }
         }
+
+        System.out.println("\nKembalian Anda             : Rp. " + (transaksi.getJumlahUang() - biaya));
+        penutup();
     }
 
     public void menuDonat()
@@ -304,7 +302,6 @@ public class Pelayanan
 
     /*
     Cetak Bon
-
     public void Bon()
     {
         System.out.println(getDate());
@@ -320,9 +317,9 @@ public class Pelayanan
     {
         String feedback;
 
-        System.out.println("Sebaris feedback dari Anda sangat kami harapkan !");
+        System.out.println("\nSebaris feedback dari Anda sangat kami harapkan !");
         System.out.print("Feedback : ");
-        feedback = in.nextLine();
+        feedback = input.nextLine();
         //kasi kata kata yg keren dungz !
         System.out.println("\n\nTerima kasih !\nDatang lagi yoo...\n");
     }
