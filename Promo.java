@@ -18,7 +18,7 @@ public class Promo extends Pelayanan
     {
          System.out.println(" ============== Promo yang kami miliki adalah : =============");
          System.out.println(" ||                                                        ||");
-         System.out.println(" || *> Beli 3 dessert dox dapat 5 donat gratis             ||");
+         System.out.println(" || *> Beli 3 dessert box dapat 5 donat gratis             ||");
          System.out.println(" || *> Potongan harga 25k dengan minimum transaksi 150k    ||");
          System.out.println(" ||                                                        ||");
          System.out.println(" ============================================================");
@@ -31,7 +31,8 @@ public class Promo extends Pelayanan
 
           System.out.println(" Selamat anda mendapatkan promo beli 3 dessert box dapat 5 donat gratis!! ");
           System.out.println(" Silahkan pilih 5 donat yang anda inginkan! \n\n");
-          //super.menuDonat();
+          super.menuDonat();
+          super.topingDonat();
           System.out.println("Pilihan donat 1 :");
           pilihanDonat = p.nextInt();
           System.out.println("Pilihan donat 2 :");
@@ -51,4 +52,6 @@ public class Promo extends Pelayanan
             
     }
 }
+    
+
     
