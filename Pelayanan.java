@@ -7,17 +7,20 @@ import java.util.Scanner;
 
 public class Pelayanan extends Penyimpanan
 {
+    private Promo promo;
     private Transaksi transaksi;
     private Scanner in;
     private Scanner input;
-
+    private int banyakDB;
 
     public Pelayanan()
     {
         super();
+        promo = new Promo();
         transaksi = new Transaksi();
         in = new Scanner(System.in);
         input = new Scanner(System.in);
+        banyakDB = 0;
     }
 
     public void welcome()
@@ -31,10 +34,10 @@ public class Pelayanan extends Penyimpanan
         System.out.println("\n\n\n");
         System.out.print("Masukkan nama Anda : ");;
         transaksi.setNama(in.nextLine());
-        System.out.println("\n\nHai " + transaksi.getNama() + " !\nSelamat datang di San Donuts And Cakes !");
+        System.out.println("\n\nHai " + transaksi.getNama() + " !\nSelamat datang di San Donuts And Cakes !\n");
 
         // Tekan enter untuk lanjut ke Main menu
-        System.out.print("\nPress enter to continue... ");
+        System.out.print("Tekan enter untuk lanjut ke menu utama... ");
             try {
                 System.in.read();
             }
@@ -65,10 +68,12 @@ public class Pelayanan extends Penyimpanan
         
         if(pilihan == 1) {
             // Panggil list promo dr class Promo
-            System.out.println("\nKami punya promo ...\n");
+            System.out.println("\n\n");
+            promo.Beranda();
+            System.out.println("\n\n");
 
-            // Tekan enter untuk balik ke Main menu
-            System.out.print("Press enter to continue... ");
+            // Tekan enter untuk kembali ke Main menu
+            System.out.print("Tekan enter untuk kembali ke menu utama... ");
             try {
                 System.in.read();
             }
@@ -101,6 +106,10 @@ public class Pelayanan extends Penyimpanan
 
         // cek promo. Klo dpt promo, panggil class promo
         // setelah kalkulasi promo, kirim var biaya ke Transaksi untuk bon
+
+        transaksi.setBiaya(promo.cekPromo(banyakDB, transaksi.getBiaya()));
+
+
 
         // Proses transaksi sampai kembalian
         System.out.println("\nTotal biaya belanjaan Anda : Rp. " + transaksi.getBiaya());
@@ -173,7 +182,7 @@ public class Pelayanan extends Penyimpanan
         System.out.println("|   12. Donat Selai Strawberry\t\t\t " + super.getStokDonat("Donat Selai Strawberry") + "\tRp 3.000    |");
         System.out.println("|\t\t\t\t\t\t\t\t    |");
         System.out.println("|   13. Donat Selai Blueberry\t\t\t " + super.getStokDonat("Donat Selai Blueberry") + "\tRp 3.000    |");
-        System.out.println("|___________________________________________________________________|");
+        System.out.println("|___________________________________________________________________|\n");
     }
 
     public void topingDonat()
@@ -210,7 +219,7 @@ public class Pelayanan extends Penyimpanan
             System.out.println("Maaf, stok tidak tersedia !");
 
             // Tekan enter untuk balik ke menu pilih donat
-            System.out.print("Press enter to continue... ");
+            System.out.print("Tekan enter untuk kembali ke menu pemilihan donat... ");
             try {
                 System.in.read();
             }
@@ -253,7 +262,7 @@ public class Pelayanan extends Penyimpanan
         // Menampilkan tampilan daftar menu donat
         menuDonat();
 
-        System.out.println("\nPilih 0 untuk kembali ke tampilan awal !");
+        System.out.println("Pilih 0 untuk kembali ke tampilan awal !");
         System.out.print("Pilihan Anda : ");
         pilihanDonat = in.nextInt();
 
@@ -368,7 +377,7 @@ public class Pelayanan extends Penyimpanan
             System.out.println("Maaf, stok tidak tersedia !");
 
             // Tekan enter untuk balik ke menu pilih dessert box
-            System.out.print("Press enter to continue... ");
+            System.out.print("Tekan enter untuk kembali ke menu pemilihan dessert box... ");
             try {
                 System.in.read();
             }
