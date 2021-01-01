@@ -12,64 +12,70 @@ public class Bon {
     private int kembalian;
     protected String nama;
     private LocalDate tanggal;
-    private String p1;
-    private String p2;
-    private String p3;
-    private int totalbelanja;
+    private int totalBelanja;
 
-    public Bon(){
+    public Bon()
+    {
 
     }
 
-    public Bon(String nama,String p1,String p2,String p3,int totalbelanja, int jumlahUang, int kembalian){
+    public Bon(String nama,int totalBelanja, int jumlahUang, int kembalian)
+    {
         tanggal = LocalDate.now();
         this.nama = nama;
-        this.p1 = p1;
-        this.p2 = p2;
-        this.p3 = p3;
-        this.totalbelanja = ttlbelanja;
+        this.totalBelanja = totalBelanja;//total harga belanjaan pelanggan
         this.jumlahUang = jumlahUang;
         this.kembalian = kembalian;
 
     }
 
-    public void setCodeTransaksi(String codeTransaksi){
+    public void setCodeTransaksi(String codeTransaksi)
+    {
         this.codeTransaksi = codeTransaksi;
     }
 
-    public void setJumlahUang(int jumlahUang){
+    public void setJumlahUang(int jumlahUang)
+    {
         this.jumlahUang = jumlahUang;
     }
 
-    public void setKembalian(int kembalian){
+    public void setKembalian(int kembalian)
+    {
         this.kembalian = kembalian;
     }
 
-    public String getCodeTransaksi(){
+    public String getCodeTransaksi()
+    {
         return this.codeTransaksi;
     }
 
-    public int getJumlahUang(){
+    public int getJumlahUang()
+    {
         return this.jumlahUang;
     }
 
-    public int getKembalian(){
+    public int getKembalian()
+    {
         return this.kembalian;
     }
 
-    public void setNama(String nama){
+    public void setNama(String nama)
+    {
         this.nama = nama;
     }
 
-    public String getNama(){
+    public String getNama()
+    {
         return this.nama;
     }
 
-    public LocalDate tanggal(){
+    public LocalDate tanggal()
+    {
         return tanggal;
     }
 
-    public String toString(){
-        return "\n" + tanggal +"\n"+nama+"\n"+p1+"\n"+p2+"\n"+p3+"\n"+totalbelanja+"\n"+jumlahUang+"\n"+kembalian;
+    public String toString()
+    {
+        return "\n" + tanggal +"\n"+nama+"\n"+totalBelanja+"\n"+jumlahUang+"\n"+kembalian;
     }
 }
