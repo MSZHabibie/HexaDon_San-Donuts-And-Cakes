@@ -223,11 +223,32 @@ public class Pelayanan extends Penyimpanan
         }
     }
 
+    // Pilih toping untuk donat tertentu
+    public void pilihToping(int banyak)
+    {
+        int pilihanToping = 0;
+
+        // Menampilkan tampilan daftar toping untuk donat nomor 2 sampai 8
+        topingDonat();
+
+        for(int i = 1; i <= banyak; i++) {
+            System.out.println();
+            System.out.print("Toping untuk donat " + i + " : ");
+            pilihanToping = in.nextInt();
+
+            // Exception handling pemilihan toping
+            while(pilihanToping < 1 || pilihanToping > 8) {
+                System.out.println("\nMohon pilih antara 1-8 !");
+                System.out.print("Pilihan Anda : ");
+                pilihanToping = in.nextInt();
+            }
+        } 
+    }
+
     public int pilihDonat()
     {        
         int banyak = 0;
         int pilihanDonat = 0;
-        int pilihanToping = 0;
 
         // Menampilkan tampilan daftar menu donat
         menuDonat();
@@ -260,24 +281,31 @@ public class Pelayanan extends Penyimpanan
             }
             else if(pilihanDonat == 2) {
                 cekStokDonat("Donat Cokelat", banyak);
+                pilihToping(banyak);
             }
             else if(pilihanDonat == 3) {
                 cekStokDonat("Donat Cokelat Putih", banyak);
+                pilihToping(banyak);
             }
             else if(pilihanDonat == 4) {
                 cekStokDonat("Donat Matcha", banyak);
+                pilihToping(banyak);
             }
             else if(pilihanDonat == 5) {
                 cekStokDonat("Donat Strawberry", banyak);
+                pilihToping(banyak);
             }
             else if(pilihanDonat == 6) {
                 cekStokDonat("Donat Blueberry", banyak);
+                pilihToping(banyak);
             }
             else if(pilihanDonat == 7) {
                 cekStokDonat("Donat Tiramisu", banyak);
+                pilihToping(banyak);
             }
             else if(pilihanDonat == 8) {
                 cekStokDonat("Donat Cappuchino", banyak);
+                pilihToping(banyak);
             }
             else if(pilihanDonat == 9) {
                 cekStokDonat("Donat Bomboloni Isi Cokelat", banyak);
@@ -294,26 +322,7 @@ public class Pelayanan extends Penyimpanan
             else if(pilihanDonat == 13) {
                 cekStokDonat("Donat Selai Blueberry", banyak);
             }
-        } 
-
-        // Pilih toping untuk donat tertentu
-        if(pilihanDonat >= 2 && pilihanDonat <= 8) {
-            // Menampilkan tampilan daftar toping untuk donat nomor 2 sampai 8
-            topingDonat();
-
-            for(int i = 1; i <= banyak; i++) {
-                System.out.println();
-                System.out.print("Toping untuk donat " + i + " : ");
-                pilihanToping = in.nextInt();
-
-                // Exception handling pemilihan toping
-                while(pilihanToping < 1 || pilihanToping > 8) {
-                    System.out.println("\nMohon pilih antara 1-8 !");
-                    System.out.print("Pilihan Anda : ");
-                    pilihanToping = in.nextInt();
-                }
-            }
-        }       
+        }      
         
         // Hitung total biaya belanjaan donat
         if(pilihanDonat == 1) {
