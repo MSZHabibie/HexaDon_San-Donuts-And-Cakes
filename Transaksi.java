@@ -6,11 +6,13 @@
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Transaksi
 {
     private int jumlahUang;
-    private int harga;
-    private int jumlah;
+    private int biaya;
     private String kodeTransaksi;
     private String nama;
 
@@ -20,11 +22,12 @@ public class Transaksi
     public Transaksi()
     {
         jumlahUang = 0;
-        harga = 0;
-        jumlah = 0;
+        biaya = 0;
         kodeTransaksi = "";
         nama = "";
 
+        // Generate kode transaksi
+        setKodeTransaksi();
     }
 
     /**
@@ -43,46 +46,19 @@ public class Transaksi
         this.jumlahUang += jumlahUang;
     }
 
-    public int getHarga()
-    {
-        return harga;
-    }
-
-    public void setHarga(int harga)
-    {
-        this.harga = harga;
-    }
-
-    public int getJumlah()
-    {
-        return jumlah;
-    }
-
-    public void setJumlah(int jumlah)
-    {
-        this.jumlah = jumlah;
-    }
 
     /**
      * Method untuk mengembalikan kode transaksi
      */
     public String getKodeTransaksi()
     {
-        return kodeTransaksi;
+        return this.kodeTransaksi;
     }
 
-    /**
-     * Method untuk memasukkan kode transaksi
-     */
-    public void setKodeTransaksi(String kodeTransaksi)
-    {
 
-        this.kodeTransaksi = kodeTransaksi;
-    }
-
-    public String buatKodeTransaksi()
+    public void setKodeTransaksi()
     {
-        return "Don" + (int) (1 + (Math.random() * (10000 + 1)));
+        this.kodeTransaksi = "Don" + (int) (1 + (Math.random() * (10000 - 1)));
     }
 
     public String getNama()
@@ -95,21 +71,24 @@ public class Transaksi
         this.nama = nama;
     }
 
-    /**
-     * Method untuk menghitung total transaksi
-     */
-    public int totalTransaksi()
+
+    public void tambahBiaya(int banyak, int harga)
     {
-        return jumlah * harga;
+        this.biaya += banyak * harga;
+    }
+
+    public int getBiaya()
+    {
+        return this.biaya;
     }
 
     /**
      * Method untuk menghitung uang kembalian
      * @return
      */
-    public int Kembalian()
+    public int kembalian()
     {
-        return jumlahUang - totalTransaksi();
+        return this.jumlahUang - this.biaya;
     }
 
     /**
@@ -121,16 +100,4 @@ public class Transaksi
         SimpleDateFormat df = new SimpleDateFormat("E, dd.MM.yyy | hh.mm.ss a");
         return df.format(date);
     }
-
-    public void Bon()
-    {
-        System.out.println(\tgetDate());
-        System.out.println("Kode Transaksi = " + getKodeTransaksi());
-        System.out.println("Nama = " + getNama());
-        System.out.println("Jumlah Uang " + getJumlahUang());
-        System.out.println("Total = " + totalTransaksi());
-        System.out.println("Kembalian =  " + Kembalian());
-    }
-
 }
-
