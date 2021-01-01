@@ -5,17 +5,16 @@
 
 import java.util.Scanner;
 
-public class Pelayanan
+public class Pelayanan extends Penyimpanan
 {
-    protected Penyimpanan simpan;
-    protected Transaksi transaksi;
+    private Transaksi transaksi;
     private Scanner in;
     private Scanner input;
 
 
     public Pelayanan()
     {
-        simpan = new Penyimpanan();
+        super();
         transaksi = new Transaksi();
         in = new Scanner(System.in);
         input = new Scanner(System.in);
@@ -125,6 +124,15 @@ public class Pelayanan
         }
         
         penutup();
+
+        // Tekan enter untuk lanjut ke pencetakan bon
+        System.out.print("Tekan enter untuk lanjut ke pencetakan bon... ");
+        try {
+            System.in.read();
+        }
+        catch(Exception e) {}
+
+
         cetakBon();
         return 0;
     }
@@ -140,31 +148,31 @@ public class Pelayanan
         System.out.println("|\t\t\t\t\t\t\t\t    |");
         System.out.println("|\t\tMenu\t\t\t\tStok\t  Harga\t    |");
         System.out.println("|\t\t\t\t\t\t\t\t    |");
-        System.out.println("|   1. Donat Gula\t\t\t\t " + simpan.getStokDonat("Donat Gula") + "\tRp 2.000    |");
+        System.out.println("|   1. Donat Gula\t\t\t\t " + super.getStokDonat("Donat Gula") + "\tRp 2.000    |");
         System.out.println("|\t\t\t\t\t\t\t\t    |");
-        System.out.println("|   2. Donat Cokelat\t\t\t\t " + simpan.getStokDonat("Donat Cokelat") + "\tRp 2.500    |");
+        System.out.println("|   2. Donat Cokelat\t\t\t\t " + super.getStokDonat("Donat Cokelat") + "\tRp 2.500    |");
         System.out.println("|\t\t\t\t\t\t\t\t    |");
-        System.out.println("|   3. Donat Cokelat Putih\t\t\t " + simpan.getStokDonat("Donat Cokelat Putih") + "\tRp 2.500    |");
+        System.out.println("|   3. Donat Cokelat Putih\t\t\t " + super.getStokDonat("Donat Cokelat Putih") + "\tRp 2.500    |");
         System.out.println("|\t\t\t\t\t\t\t\t    |");
-        System.out.println("|   4. Donat Matcha\t\t\t\t " + simpan.getStokDonat("Donat Matcha") + "\tRp 2.500    |");
+        System.out.println("|   4. Donat Matcha\t\t\t\t " + super.getStokDonat("Donat Matcha") + "\tRp 2.500    |");
         System.out.println("|\t\t\t\t\t\t\t\t    |");
-        System.out.println("|   5. Donat Strawberry\t\t\t\t " + simpan.getStokDonat("Donat Strawberry") + "\tRp 2.500    |");
+        System.out.println("|   5. Donat Strawberry\t\t\t\t " + super.getStokDonat("Donat Strawberry") + "\tRp 2.500    |");
         System.out.println("|\t\t\t\t\t\t\t\t    |");
-        System.out.println("|   6. Donat Blueberry\t\t\t\t " + simpan.getStokDonat("Donat Blueberry") + "\tRp 2.500    |");
+        System.out.println("|   6. Donat Blueberry\t\t\t\t " + super.getStokDonat("Donat Blueberry") + "\tRp 2.500    |");
         System.out.println("|\t\t\t\t\t\t\t\t    |");
-        System.out.println("|   7. Donat Tiramisu\t\t\t\t " + simpan.getStokDonat("Donat Tiramisu") + "\tRp 2.500    |");
+        System.out.println("|   7. Donat Tiramisu\t\t\t\t " + super.getStokDonat("Donat Tiramisu") + "\tRp 2.500    |");
         System.out.println("|\t\t\t\t\t\t\t\t    |");
-        System.out.println("|   8. Donat Cappuchino\t\t\t\t " + simpan.getStokDonat("Donat Cappuchino") + "\tRp 2.500    |");
+        System.out.println("|   8. Donat Cappuchino\t\t\t\t " + super.getStokDonat("Donat Cappuchino") + "\tRp 2.500    |");
         System.out.println("|\t\t\t\t\t\t\t\t    |");
-        System.out.println("|   9. Donat Bomboloni Isi Cokelat\t\t " + simpan.getStokDonat("Donat Bomboloni Isi Cokelat") + "\tRp 3.000    |");
+        System.out.println("|   9. Donat Bomboloni Isi Cokelat\t\t " + super.getStokDonat("Donat Bomboloni Isi Cokelat") + "\tRp 3.000    |");
         System.out.println("|\t\t\t\t\t\t\t\t    |");
-        System.out.println("|   10. Donat Bomboloni Isi Strawberry\t\t " + simpan.getStokDonat("Donat Bomboloni Isi Strawberry") + "\tRp 3.000    |");
+        System.out.println("|   10. Donat Bomboloni Isi Strawberry\t\t " + super.getStokDonat("Donat Bomboloni Isi Strawberry") + "\tRp 3.000    |");
         System.out.println("|\t\t\t\t\t\t\t\t    |");
-        System.out.println("|   11. Donat Bomboloni Isi Blueberry\t\t " + simpan.getStokDonat("Donat Bomboloni Isi Blueberry") + "\tRp 3.000    |");
+        System.out.println("|   11. Donat Bomboloni Isi Blueberry\t\t " + super.getStokDonat("Donat Bomboloni Isi Blueberry") + "\tRp 3.000    |");
         System.out.println("|\t\t\t\t\t\t\t\t    |");
-        System.out.println("|   12. Donat Selai Strawberry\t\t\t " + simpan.getStokDonat("Donat Selai Strawberry") + "\tRp 3.000    |");
+        System.out.println("|   12. Donat Selai Strawberry\t\t\t " + super.getStokDonat("Donat Selai Strawberry") + "\tRp 3.000    |");
         System.out.println("|\t\t\t\t\t\t\t\t    |");
-        System.out.println("|   13. Donat Selai Blueberry\t\t\t " + simpan.getStokDonat("Donat Selai Blueberry") + "\tRp 3.000    |");
+        System.out.println("|   13. Donat Selai Blueberry\t\t\t " + super.getStokDonat("Donat Selai Blueberry") + "\tRp 3.000    |");
         System.out.println("|___________________________________________________________________|");
     }
 
@@ -197,7 +205,7 @@ public class Pelayanan
 
     public void cekStokDonat(String donat, int banyak)
     {
-        if(banyak > simpan.getStokDonat(donat)) {
+        if(banyak > super.getStokDonat(donat)) {
             // Klo stok gk tersedia sebanyak diinginkan, lalu balik ke menu pilih donat
             System.out.println("Maaf, stok tidak tersedia !");
 
@@ -211,7 +219,7 @@ public class Pelayanan
             pilihDonat();
         }
         else {
-            simpan.kurangiStokDonat(donat, banyak);
+            super.kurangiStokDonat(donat, banyak);
         }
     }
 
@@ -256,34 +264,34 @@ public class Pelayanan
             else if(pilihanDonat == 3) {
                 cekStokDonat("Donat Cokelat Putih", banyak);
             }
-            else if(pilihanDonat == 2) {
+            else if(pilihanDonat == 4) {
                 cekStokDonat("Donat Matcha", banyak);
             }
-            else if(pilihanDonat == 2) {
+            else if(pilihanDonat == 5) {
                 cekStokDonat("Donat Strawberry", banyak);
             }
-            else if(pilihanDonat == 2) {
+            else if(pilihanDonat == 6) {
                 cekStokDonat("Donat Blueberry", banyak);
             }
-            else if(pilihanDonat == 2) {
+            else if(pilihanDonat == 7) {
                 cekStokDonat("Donat Tiramisu", banyak);
             }
-            else if(pilihanDonat == 2) {
+            else if(pilihanDonat == 8) {
                 cekStokDonat("Donat Cappuchino", banyak);
             }
-            else if(pilihanDonat == 2) {
+            else if(pilihanDonat == 9) {
                 cekStokDonat("Donat Bomboloni Isi Cokelat", banyak);
             }
-            else if(pilihanDonat == 2) {
+            else if(pilihanDonat == 10) {
                 cekStokDonat("Donat Bomboloni Isi Strawberry", banyak);
             }
-            else if(pilihanDonat == 2) {
+            else if(pilihanDonat == 11) {
                 cekStokDonat("Donat Bomboloni Isi Blueberry", banyak);
             }
-            else if(pilihanDonat == 2) {
+            else if(pilihanDonat == 12) {
                 cekStokDonat("Donat Selai Strawberry", banyak);
             }
-            else if(pilihanDonat == 2) {
+            else if(pilihanDonat == 13) {
                 cekStokDonat("Donat Selai Blueberry", banyak);
             }
         } 
@@ -332,21 +340,21 @@ public class Pelayanan
         System.out.println("|\t\t\t\t\t\t\t\t|");
         System.out.println("|\tMenu\t\t\tStok\t\t\tHarga\t|");
         System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   1. Turkish\t\t\t " + simpan.getStokDessert("Turkish") + "\t\t    Rp 35.000   |");
+        System.out.println("|   1. Turkish\t\t\t " + super.getStokDessert("Turkish") + "\t\t    Rp 35.000   |");
         System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   2. Red Velvet\t\t " + simpan.getStokDessert("Red Velvet") + "\t\t    Rp 35.000   |");
+        System.out.println("|   2. Red Velvet\t\t " + super.getStokDessert("Red Velvet") + "\t\t    Rp 35.000   |");
         System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   3. Lotus\t\t\t " + simpan.getStokDessert("Lotus") + "\t\t    Rp 35.000   |");
+        System.out.println("|   3. Lotus\t\t\t " + super.getStokDessert("Lotus") + "\t\t    Rp 35.000   |");
         System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   4. Chocolate\t\t " + simpan.getStokDessert("Chocolate") + "\t\t    Rp 35.000   |");
+        System.out.println("|   4. Chocolate\t\t " + super.getStokDessert("Chocolate") + "\t\t    Rp 35.000   |");
         System.out.println("|\t\t\t\t\t\t\t\t|");
-        System.out.println("|   5. Cadburry\t\t\t " + simpan.getStokDessert("Cadburry") + "\t\t    Rp 35.000   |");
+        System.out.println("|   5. Cadburry\t\t\t " + super.getStokDessert("Cadburry") + "\t\t    Rp 35.000   |");
         System.out.println("|_______________________________________________________________|");
     }
 
     public void cekStokDB(String db, int banyak)
     {
-        if(banyak > simpan.getStokDessert(db)) {
+        if(banyak > super.getStokDessert(db)) {
             // Klo stok gk tersedia sebanyak diinginkan, lalu balik ke menu pilih dessert box
             System.out.println("Maaf, stok tidak tersedia !");
 
@@ -360,7 +368,7 @@ public class Pelayanan
             pilihDB();
         }
         else {
-            simpan.kurangiStokDessert(db, banyak);
+            super.kurangiStokDessert(db, banyak);
         }
     }
 
