@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class Pelayanan
 {
-    private Penyimpanan simpan;
-    private Transaksi transaksi;
+    protected Penyimpanan simpan;
+    protected Transaksi transaksi;
     private Scanner in;
     private Scanner input;
 
@@ -44,7 +44,7 @@ public class Pelayanan
         menuUtama();
     }
 
-    public void menuUtama()
+    public int menuUtama()
     {
         char beliLain = 'n';
 
@@ -76,6 +76,7 @@ public class Pelayanan
             catch(Exception e) {}
 
             menuUtama();
+            return 0;
         }
         else if(pilihan == 2) {
             pilihDonat();
@@ -96,28 +97,36 @@ public class Pelayanan
 
         if(beliLain == 'y' || beliLain == 'Y') {
             menuUtama();
+            return 0;
         }
 
-        // kuarangi stok ke penyimpanan
         // cek promo. Klo dpt promo, panggil class promo
         // setelah kalkulasi promo, kirim var biaya ke Transaksi untuk bon
 
-        // Peoses transaksi sampe kembalian
+        // Proses transaksi sampai kembalian
         System.out.println("\nTotal biaya belanjaan Anda : Rp. " + transaksi.getBiaya());
         System.out.print("Masukkan uang Anda         : Rp. ");
         transaksi.setJumlahUang(in.nextInt());
 
         // Meminta tambahan uang ketika uang yang dimasukkan kurang dari total biaya belanjaan
-        while(transaksi.getJumlahUang() - transaksi.getBiaya() < 0) {
-            System.out.println("\nMaaf, nominal uang yang Anda masukkan kurang sejumlah Rp. " + (transaksi.getJumlahUang() - transaksi.getBiaya()));
-            System.out.print("Masukkan tambahan uang                                  : Rp. ");
-            transaksi.setJumlahUang(in.nextInt());
-        }
+        if(transaksi.getJumlahUang() - transaksi.getBiaya() < 0) {
+            while(transaksi.getJumlahUang() - transaksi.getBiaya() < 0) {
+                System.out.println("\nMaaf, nominal uang yang Anda masukkan kurang sejumlah Rp. " + Math.abs((int) (transaksi.getJumlahUang() - transaksi.getBiaya())));
+                System.out.print("Masukkan tambahan uang                              : Rp. ");
+                transaksi.setJumlahUang(in.nextInt());
+            }
 
-        // Kembalian
-        System.out.println("\nKembalian Anda             : Rp. " + transaksi.kembalian());
+            // Cetak kembalian
+            System.out.println("Kembalian Anda                                      : Rp. " + transaksi.kembalian());
+        }
+        else {
+            // Cetak kembalian
+            System.out.println("Kembalian Anda             : Rp. " + transaksi.kembalian());
+        }
+        
         penutup();
         cetakBon();
+        return 0;
     }
 
     public void menuDonat()
@@ -206,7 +215,7 @@ public class Pelayanan
         }
     }
 
-    public void pilihDonat()
+    public int pilihDonat()
     {        
         int banyak = 0;
         int pilihanDonat = 0;
@@ -230,6 +239,7 @@ public class Pelayanan
         if(pilihanDonat == 0) {
             // Balik ke Main menu
             menuUtama();
+            return 0;
         }
         else {
             // Banyak donat ini yang ingin dibeli
@@ -307,6 +317,8 @@ public class Pelayanan
         else {
             transaksi.tambahBiaya(banyak, 3000);
         }
+
+        return 0;
     }
 
     public void menuDB()
@@ -352,7 +364,7 @@ public class Pelayanan
         }
     }
 
-    public void pilihDB()
+    public int pilihDB()
     {
         int banyak = 0;
         int pilihanDB = 0;
@@ -375,6 +387,7 @@ public class Pelayanan
         if(pilihanDB == 0) {
             // Kembali ke main menu
             menuUtama();
+            return 0;
         }
         else {
             // Banyak dessert box ini yang ingin dibeli
@@ -401,6 +414,8 @@ public class Pelayanan
 
         // Menghitung total biaya belanjaan dessert box
         transaksi.tambahBiaya(banyak, 35000);
+
+        return 0;
     }
 
     public void penutup()
