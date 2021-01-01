@@ -1,6 +1,6 @@
 /**
  * @author (Fikrul Akhyar)
- * @version (5.0)
+ * @version 01-01-2021
  */
 
 import java.text.SimpleDateFormat;
@@ -93,6 +93,14 @@ public class Transaksi
     public int getBiaya()
     {
         return this.biaya;
+    }
+
+    /**
+     * Method untuk memasukkan biaya baru
+     */
+    public void setBiaya(int biayaBaru)
+    {
+        this.biaya = biayaBaru;
     }
 
     /**
