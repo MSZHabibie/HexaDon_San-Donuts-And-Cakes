@@ -43,7 +43,7 @@ public class Transaksi
     {
         this.jumlahUang += jumlahUang;
     }
-    
+
     /**
      * Method untuk mereturn kode transaksi
      * @return
@@ -115,4 +115,3 @@ public class Transaksi
         return df.format(date);
     }
 }
-
