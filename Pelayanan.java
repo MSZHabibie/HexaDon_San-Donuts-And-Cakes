@@ -11,7 +11,7 @@ public class Pelayanan extends Penyimpanan
     private Transaksi transaksi;
     private Scanner in;
     private Scanner input;
-    private int banyakDB;
+    // private int banyakDB;
 
     public Pelayanan()
     {
@@ -20,7 +20,7 @@ public class Pelayanan extends Penyimpanan
         transaksi = new Transaksi();
         in = new Scanner(System.in);
         input = new Scanner(System.in);
-        banyakDB = 0;
+        // banyakDB = 0;
     }
 
     public void welcome()
@@ -33,15 +33,15 @@ public class Pelayanan extends Penyimpanan
         System.out.println("\t\t\t\t\t   🥯 🍩 🎂 🍰");
         System.out.println("\n\n\n");
         System.out.print("Masukkan nama Anda : ");;
-        transaksi.setNama(in.nextLine());
+        transaksi.setNama(input.nextLine());
         System.out.println("\n\nHai " + transaksi.getNama() + " !\nSelamat datang di San Donuts And Cakes !\n");
 
         // Tekan enter untuk lanjut ke Main menu
         System.out.print("Tekan enter untuk lanjut ke menu utama... ");
-            try {
-                System.in.read();
-            }
-            catch(Exception e) {}
+        try {
+            System.in.read();
+        }
+        catch(Exception e) {}
 
         menuUtama();
     }
@@ -104,12 +104,11 @@ public class Pelayanan extends Penyimpanan
             return 0;
         }
 
-        // cek promo. Klo dpt promo, panggil class promo
-        // setelah kalkulasi promo, kirim var biaya ke Transaksi untuk bon
-
-        transaksi.setBiaya(promo.cekPromo(banyakDB, transaksi.getBiaya()));
-
-
+        // transaksi.setBiaya(promo.cekPromo(banyakDB, transaksi.getBiaya()));
+        /*
+        Ni bs yes !
+        transaksi.setBiaya(promo.cekPromo(transaksi.getBiaya()));
+        */
 
         // Proses transaksi sampai kembalian
         System.out.println("\nTotal biaya belanjaan Anda : Rp. " + transaksi.getBiaya());
