@@ -11,7 +11,8 @@ public class Pelayanan extends Penyimpanan
     private Transaksi transaksi;
     private Scanner in;
     private Scanner input;
-    // private int banyakDB;
+    int banyakDB;
+    private String feedback;
 
     public Pelayanan()
     {
@@ -20,7 +21,8 @@ public class Pelayanan extends Penyimpanan
         transaksi = new Transaksi();
         in = new Scanner(System.in);
         input = new Scanner(System.in);
-        // banyakDB = 0;
+        banyakDB = 0;
+        feedback = " ";
     }
 
     public void welcome()
@@ -142,6 +144,7 @@ public class Pelayanan extends Penyimpanan
 
 
         cetakBon();
+        simpanBon(transaksi.getDate(), transaksi.getKodeTransaksi(), transaksi.getNama(), transaksi.getBiaya(), transaksi.getJumlahUang(), transaksi.kembalian(), this.feedback);
         return 0;
     }
 
@@ -445,11 +448,9 @@ public class Pelayanan extends Penyimpanan
 
     public void penutup()
     {
-        String feedback;
-
         System.out.println("\nSebaris feedback dari Anda sangat kami harapkan !");
         System.out.print("Feedback : ");
-        feedback = input.nextLine();
+        this.feedback = input.nextLine();
         //kasi kata kata yg keren dungz !
         System.out.println("\n\nTerima kasih !\nDatang lagi yoo...\n");
     }
@@ -464,6 +465,12 @@ public class Pelayanan extends Penyimpanan
         System.out.println("Jumlah uang             : " + transaksi.getJumlahUang());
         System.out.println("Kembalian               : " + transaksi.kembalian());
         System.out.println("\n\n");
+    }
+
+    public void simpanBon(String tgl, String kodeTransaksi, String nama, int biaya, int uang, int kembalian, String feedback)
+    {
+        Bon bon = new Bon(tgl, kodeTransaksi, nama, biaya, uang, kembalian, feedback);
+        penyimpanan.tambahBon(bon);
     }
 
 
