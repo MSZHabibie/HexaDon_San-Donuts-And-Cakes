@@ -11,7 +11,6 @@ public class Pelayanan extends Penyimpanan
     private Transaksi transaksi;
     private Scanner in;
     private Scanner input;
-    int banyakDB;
     private String feedback;
 
     public Pelayanan()
@@ -21,7 +20,6 @@ public class Pelayanan extends Penyimpanan
         transaksi = new Transaksi();
         in = new Scanner(System.in);
         input = new Scanner(System.in);
-        banyakDB = 0;
         feedback = " ";
     }
 
@@ -106,7 +104,7 @@ public class Pelayanan extends Penyimpanan
             return 0;
         }
 
-        // transaksi.setBiaya(promo.cekPromo(banyakDB, transaksi.getBiaya()));
+        // transaksi.setBiaya(promo.cekPromo(transaksi.getBiaya()));
         /*
         Ni bs yes !
         transaksi.setBiaya(promo.cekPromo(transaksi.getBiaya()));
@@ -144,7 +142,7 @@ public class Pelayanan extends Penyimpanan
 
 
         cetakBon();
-        simpanBon(transaksi.getDate(), transaksi.getKodeTransaksi(), transaksi.getNama(), transaksi.getBiaya(), transaksi.getJumlahUang(), transaksi.kembalian(), this.feedback);
+        simpanBon();
         return 0;
     }
 
@@ -438,6 +436,8 @@ public class Pelayanan extends Penyimpanan
             else if(pilihanDB == 5) {
                 cekStokDB("Cadburry", banyak);
             }
+
+            promo.tambahDB(banyak);
         }
 
         // Menghitung total biaya belanjaan dessert box
@@ -467,10 +467,9 @@ public class Pelayanan extends Penyimpanan
         System.out.println("\n\n");
     }
 
-    public void simpanBon(String tgl, String kodeTransaksi, String nama, int biaya, int uang, int kembalian, String feedback)
+    public void simpanBon()
     {
-        Bon bon = new Bon(tgl, kodeTransaksi, nama, biaya, uang, kembalian, feedback);
-        penyimpanan.tambahBon(bon);
+        super.tambahBon(new Bon(transaksi.getDate(), transaksi.getKodeTransaksi(), transaksi.getNama(), transaksi.getBiaya(), transaksi.getJumlahUang(), transaksi.kembalian(), this.feedback));
     }
 
 
