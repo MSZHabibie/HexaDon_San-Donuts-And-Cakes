@@ -49,6 +49,7 @@ public class Pelayanan extends Penyimpanan
     public int menuUtama()
     {
         char beliLain = 'n';
+        int banyakDB = 0;
 
         // Main menu
         System.out.println("\nMenu utama :");
@@ -86,7 +87,7 @@ public class Pelayanan extends Penyimpanan
             pilihDonat();
         }
         else if(pilihan == 3) {
-            pilihDB();
+            banyakDB += pilihDB();
         }
 
         // Apa mw beli yg lain ?
@@ -104,11 +105,8 @@ public class Pelayanan extends Penyimpanan
             return 0;
         }
 
-        // transaksi.setBiaya(promo.cekPromo(transaksi.getBiaya()));
-        /*
-        Ni bs yes !
-        transaksi.setBiaya(promo.cekPromo(transaksi.getBiaya()));
-        */
+        // Memeriksa dan menjalankan algoritma promo ketika pelanggan mendapatkan promo
+        transaksi.setBiaya(promo.cekPromo(banyakDB, transaksi.getBiaya()));
 
         // Proses transaksi sampai kembalian
         System.out.println("\nTotal biaya belanjaan Anda : Rp. " + transaksi.getBiaya());
@@ -394,6 +392,7 @@ public class Pelayanan extends Penyimpanan
     {
         int banyak = 0;
         int pilihanDB = 0;
+        int banyakDB = 0;
 
         // Menampilkan daftar tampilan menu dessert box
         menuDB();
@@ -437,13 +436,13 @@ public class Pelayanan extends Penyimpanan
                 cekStokDB("Cadburry", banyak);
             }
 
-            promo.tambahDB(banyak);
+            banyakDB += banyak;
         }
 
         // Menghitung total biaya belanjaan dessert box
         transaksi.tambahBiaya(banyak, 35000);
 
-        return 0;
+        return banyakDB;
     }
 
     public void penutup()
