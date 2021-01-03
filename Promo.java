@@ -8,15 +8,17 @@ import java.util.Scanner;
 
 public class Promo 
 {
-    private Pelayanan pelayanan;
+    private Scanner p;
     private Penyimpanan penyimpanan;
-     private int biaya;
+    private int biaya;
+    private int donatPromo;
       
     public Promo()
     {
-        pelayanan = new Pelayanan();
+        p = new Scanner(System.in);
         penyimpanan = new Penyimpanan();
         biaya = 0;
+        donatPromo = 0;
     }
     
     public void Beranda()
@@ -31,23 +33,22 @@ public class Promo
 
     public int cekPromo(int banyakDB, int biayaBelanjaan)
     {
-        Scanner p = new Scanner(System.in);
         int pilihanPromo = 0;
         this.biaya = biayaBelanjaan;
 
         if(banyakDB >= 3 || biayaBelanjaan >= 150000) {
 
-            if(banyakDB >= 3) {
+            if(banyakDB >= 3 && biayaBelanjaan < 150000) {
                 // Klo beli >= 3 DB tp biaya belanjaan < 150K
                 promoDB();
             }
-            else if(biayaBelanjaan >= 150000) {
+            else if(biayaBelanjaan >= 150000 && banyakDB < 3) {
                 // Klo biaya belanjaan >= 150K tp beli < 3 DB
                 promoPotonganHarga();
             }
             else {
                 // Klo dia beli >= 3 DB dan biaya belanjaan >= 150K
-                System.out.println("Selamat ! Anda mendapatkan promo !\nSilahkan pilih promo yang diinginkan !\n1. Promo 5 donat gratis\n2. Promo potongan harga");
+                System.out.println("\nSelamat ! Anda mendapatkan promo !\nSilahkan pilih promo yang diinginkan !\n1. Promo 5 donat gratis\n2. Promo potongan harga\n");
                 System.out.print("Pilihan Anda : ");
                 pilihanPromo = p.nextInt();
 
@@ -66,8 +67,6 @@ public class Promo
                 }
             }
         }
-
-        p.close();
         return this.biaya;
     }
     
@@ -90,157 +89,265 @@ public class Promo
         pilihDonat();
     }
 
-    public void kurangiStok(int s)
+    public void menuDonat()
+    {
+        // Tampilan daftar menu donat
+        System.out.println(" ___________________________________________________________________");
+        System.out.println("|   📝 \t\t\t      San's Donuts\t\t     🍩   |");
+        System.out.println("|\t\t                Menu Donat\t\t\t    |");
+        System.out.println("|\t\t     ______________________________\t\t    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|\t\tMenu\t\t\t\tStok\t  Harga\t    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   1. Donat Gula\t\t\t\t " + penyimpanan.getStokDonat("Donat Gula") + "\tRp 2.000    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   2. Donat Cokelat\t\t\t\t " + penyimpanan.getStokDonat("Donat Cokelat") + "\tRp 2.500    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   3. Donat Cokelat Putih\t\t\t " + penyimpanan.getStokDonat("Donat Cokelat Putih") + "\tRp 2.500    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   4. Donat Matcha\t\t\t\t " + penyimpanan.getStokDonat("Donat Matcha") + "\tRp 2.500    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   5. Donat Strawberry\t\t\t\t " + penyimpanan.getStokDonat("Donat Strawberry") + "\tRp 2.500    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   6. Donat Blueberry\t\t\t\t " + penyimpanan.getStokDonat("Donat Blueberry") + "\tRp 2.500    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   7. Donat Tiramisu\t\t\t\t " + penyimpanan.getStokDonat("Donat Tiramisu") + "\tRp 2.500    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   8. Donat Cappuchino\t\t\t\t " + penyimpanan.getStokDonat("Donat Cappuchino") + "\tRp 2.500    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   9. Donat Bomboloni Isi Cokelat\t\t " + penyimpanan.getStokDonat("Donat Bomboloni Isi Cokelat") + "\tRp 3.000    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   10. Donat Bomboloni Isi Strawberry\t\t " + penyimpanan.getStokDonat("Donat Bomboloni Isi Strawberry") + "\tRp 3.000    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   11. Donat Bomboloni Isi Blueberry\t\t " + penyimpanan.getStokDonat("Donat Bomboloni Isi Blueberry") + "\tRp 3.000    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   12. Donat Selai Strawberry\t\t\t " + penyimpanan.getStokDonat("Donat Selai Strawberry") + "\tRp 3.000    |");
+        System.out.println("|\t\t\t\t\t\t\t\t    |");
+        System.out.println("|   13. Donat Selai Blueberry\t\t\t " + penyimpanan.getStokDonat("Donat Selai Blueberry") + "\tRp 3.000    |");
+        System.out.println("|___________________________________________________________________|\n");
+    }
+
+    public void topingDonat()
+    {
+        // Tampilan daftar toping untuk donat nomor 2 sampai 8
+        System.out.println(" _______________________________________________________________");
+        System.out.println("|   📝 \t\t\t    San's Donuts \t\t 🍩   |");
+        System.out.println("|\t\t              Menu Toping \t\t\t|");
+        System.out.println("|\t\t   ______________________________\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   1. Tanpa toping\t\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   2. Kacang\t\t\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   3. Kacang Almond\t\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   4. Ceres\t\t\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   5. Crispy Ball Cokelat\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   6. Sprinkle Warna\t\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   7. Meses Warna\t\t\t\t\t\t|");
+        System.out.println("|\t\t\t\t\t\t\t\t|");
+        System.out.println("|   8. Keju\t\t\t\t\t\t\t|");
+        System.out.println("|_______________________________________________________________|\n");
+    }
+
+    public int cekStokDonat(String donat)
+    {
+        if(penyimpanan.getStokDonat(donat) < 1) {
+            // Klo stok gk tersedia sebanyak diinginkan, lalu balik ke menu pilih donat
+            System.out.println("Maaf, stok tidak tersedia !");
+
+            // Tekan enter untuk balik ke menu pilih donat
+            System.out.print("Tekan enter untuk kembali ke menu pemilihan donat... ");
+            try {
+                System.in.read();
+            }
+            catch(Exception e) {}
+
+            pilihDonat();
+            return 0;
+        }
+        else {
+            penyimpanan.kurangiStokDonat(donat, 1);
+        }
+
+        return 0;
+    }
+
+    public int kurangiStok(int pilihDonat)
     {
         // Kurangi stok donat
-        if(s == 1) {
-            penyimpanan.kurangiStokDonat("Donat Gula", 1);
+        if(pilihDonat == 1) {
+            cekStokDonat("Donat Gula");
         }
-        else if(s == 2) {
-            penyimpanan.kurangiStokDonat("Donat Cokelat", 1);
+        else if(pilihDonat == 2) {
+            cekStokDonat("Donat Cokelat");
         }
-        else if(s == 3) {
-            penyimpanan.kurangiStokDonat("Donat Cokelat Putih", 1);
+        else if(pilihDonat == 3) {
+            cekStokDonat("Donat Cokelat Putih");
         }
-        else if(s == 4) {
-            penyimpanan.kurangiStokDonat("Donat Matcha", 1);
+        else if(pilihDonat == 4) {
+            cekStokDonat("Donat Matcha");
         }
-        else if(s == 5) {
-            penyimpanan.kurangiStokDonat("Donat Strawberry", 1);
+        else if(pilihDonat == 5) {
+            cekStokDonat("Donat Strawberry");
         }
-        else if(s == 6) {
-            penyimpanan.kurangiStokDonat("Donat Blueberry", 1);
+        else if(pilihDonat == 6) {
+            cekStokDonat("Donat Blueberry");
         }
-        else if(s == 7) {
-            penyimpanan.kurangiStokDonat("Donat Tiramisu", 1);
+        else if(pilihDonat == 7) {
+            cekStokDonat("Donat Tiramisu");
         }
-        else if(s == 8) {
-            penyimpanan.kurangiStokDonat("Donat Cappuchino", 1);
+        else if(pilihDonat == 8) {
+            cekStokDonat("Donat Cappuchino");
         }
-        else if(s == 9) {
-            penyimpanan.kurangiStokDonat("Donat Bomboloni Isi Cokelat", 1);
+        else if(pilihDonat == 9) {
+            cekStokDonat("Donat Bomboloni Isi Cokelat");
         }
-        else if(s == 10) {
-            penyimpanan.kurangiStokDonat("Donat Bomboloni Isi Strawberry", 1);
+        else if(pilihDonat == 10) {
+            cekStokDonat("Donat Bomboloni Isi Strawberry");
         }
-        else if(s == 11) {
-            penyimpanan.kurangiStokDonat("Donat Bomboloni Isi Blueberry", 1);
+        else if(pilihDonat == 11) {
+            cekStokDonat("Donat Bomboloni Isi Blueberry");
         }
-        else if(s == 12) {
-            penyimpanan.kurangiStokDonat("Donat Selai Strawberry", 1);  
+        else if(pilihDonat == 12) {
+            cekStokDonat("Donat Selai Strawberry");
         }
-        else if(s == 13) {
-            penyimpanan.kurangiStokDonat("Donat Selai Blueberry", 1);
+        else if(pilihDonat == 13) {
+            cekStokDonat("Donat Selai Blueberry");
         }
+
+        return 0;
     }
 
     public void pilihDonat()
     {
-        Scanner p = new Scanner(System.in);
         int pilihanDonat = 0;
         int pilihanToping = 0;
 
-        pelayanan.menuDonat();
-        System.out.print("Pilihan donat 1 : ");
-        pilihanDonat = p.nextInt();
-
-        // Exception handling pemilihan donat
-        while(pilihanDonat < 1 || pilihanDonat > 13) {
-            System.out.println("\nMohon pilih antara 1-13 !");
+        if(donatPromo == 0) {
+            menuDonat();
             System.out.print("Pilihan donat 1 : ");
             pilihanDonat = p.nextInt();
-        }
 
-        kurangiStok(pilihanDonat);
-        System.out.println("\n");
-        if(pilihanDonat >= 2 && pilihanDonat <= 8) {
-            pelayanan.topingDonat();
-            System.out.print("Silahkan masukkan toping yang anda inginkan : ");
-            pilihanToping = p.nextInt();
+            // Exception handling pemilihan donat
+            while(pilihanDonat < 1 || pilihanDonat > 13) {
+                System.out.println("\nMohon pilih antara 1-13 !");
+                System.out.print("Pilihan donat 1 : ");
+                pilihanDonat = p.nextInt();
+            }
+
+            kurangiStok(pilihanDonat);
             System.out.println("\n");
-        }
-
-        pelayanan.menuDonat();
-        System.out.print("Pilihan donat 2 : ");
-        pilihanDonat = p.nextInt();
-
-        // Exception handling pemilihan donat
-        while(pilihanDonat < 1 || pilihanDonat > 13) {
-            System.out.println("\nMohon pilih antara 1-13 !");
-            System.out.print("Pilihan donat 2 : ");
-            pilihanDonat = p.nextInt();
-        }
- 
-        kurangiStok(pilihanDonat);
-        System.out.println("\n");  
-        if(pilihanDonat >= 2 && pilihanDonat <= 8) {
-            pelayanan.topingDonat();
-            System.out.print("Silahkan masukkan toping yang anda inginkan : ");
-            pilihanToping = p.nextInt();
-            System.out.println("\n");
-        }
-      
-        pelayanan.menuDonat();
-        System.out.print("Pilihan donat 3 : ");
-        pilihanDonat = p.nextInt();
-
-        // Exception handling pemilihan donat
-        while(pilihanDonat < 1 || pilihanDonat > 13) {
-            System.out.println("\nMohon pilih antara 1-13 !");
-            System.out.print("Pilihan donat 3 : ");
-            pilihanDonat = p.nextInt();
-        }
-
-        kurangiStok(pilihanDonat); 
-        System.out.println("\n");  
-        if(pilihanDonat >= 2 && pilihanDonat <= 8) {
-            pelayanan.topingDonat();
-            System.out.print("Silahkan masukkan toping yang anda inginkan : ");
-            pilihanToping = p.nextInt();
-            System.out.println("\n");
-        }
-
-        pelayanan.menuDonat();
-        System.out.print("Pilihan donat 4 : ");
-        pilihanDonat = p.nextInt();
-
-        // Exception handling pemilihan donat
-        while(pilihanDonat < 1 || pilihanDonat > 13) {
-            System.out.println("\nMohon pilih antara 1-13 !");
-            System.out.print("Pilihan donat 4 : ");
-            pilihanDonat = p.nextInt();
-        }
- 
-        kurangiStok(pilihanDonat); 
-        System.out.println("\n"); 
-        if(pilihanDonat >= 2 && pilihanDonat <= 8) {
-            pelayanan.topingDonat();
-            System.out.print("Silahkan masukkan toping yang anda inginkan : ");
-            pilihanToping = p.nextInt();
-            System.out.println("\n");
-        }
-
-        pelayanan.menuDonat();
-        System.out.print("Pilihan donat 5 : ");
-        pilihanDonat = p.nextInt();
-
-        // Exception handling pemilihan donat
-        while(pilihanDonat < 1 || pilihanDonat > 13) {
-            System.out.println("\nMohon pilih antara 1-13 !");
-            System.out.print("Pilihan donat 5 : ");
-            pilihanDonat = p.nextInt();
-        }
-
-        kurangiStok(pilihanDonat);   
-        System.out.println("\n");
-        if(pilihanDonat >= 2 && pilihanDonat <= 8) {
-            pelayanan.topingDonat();
+            if(pilihanDonat >= 2 && pilihanDonat <= 8) {
+                topingDonat();
                 System.out.print("Silahkan masukkan toping yang anda inginkan : ");
                 pilihanToping = p.nextInt();
                 System.out.println("\n");
-        }
+            }
 
-        p.close();
+            donatPromo++;
+        }
+        
+        if(donatPromo == 1) {
+            menuDonat();
+            System.out.print("Pilihan donat 2 : ");
+            pilihanDonat = p.nextInt();
+
+            // Exception handling pemilihan donat
+            while(pilihanDonat < 1 || pilihanDonat > 13) {
+                System.out.println("\nMohon pilih antara 1-13 !");
+                System.out.print("Pilihan donat 2 : ");
+                pilihanDonat = p.nextInt();
+            }
+    
+            kurangiStok(pilihanDonat);
+            System.out.println("\n");  
+            if(pilihanDonat >= 2 && pilihanDonat <= 8) {
+                topingDonat();
+                System.out.print("Silahkan masukkan toping yang anda inginkan : ");
+                pilihanToping = p.nextInt();
+                System.out.println("\n");
+            }
+
+            donatPromo++;
+        }
+        
+        if(donatPromo == 2) {
+            menuDonat();
+            System.out.print("Pilihan donat 3 : ");
+            pilihanDonat = p.nextInt();
+
+            // Exception handling pemilihan donat
+            while(pilihanDonat < 1 || pilihanDonat > 13) {
+                System.out.println("\nMohon pilih antara 1-13 !");
+                System.out.print("Pilihan donat 3 : ");
+                pilihanDonat = p.nextInt();
+            }
+
+            kurangiStok(pilihanDonat); 
+            System.out.println("\n");  
+            if(pilihanDonat >= 2 && pilihanDonat <= 8) {
+                topingDonat();
+                System.out.print("Silahkan masukkan toping yang anda inginkan : ");
+                pilihanToping = p.nextInt();
+                System.out.println("\n");
+            }    
+            
+            donatPromo++;
+        }
+      
+        if(donatPromo == 3) {
+            menuDonat();
+            System.out.print("Pilihan donat 4 : ");
+            pilihanDonat = p.nextInt();
+
+            // Exception handling pemilihan donat
+            while(pilihanDonat < 1 || pilihanDonat > 13) {
+                System.out.println("\nMohon pilih antara 1-13 !");
+                System.out.print("Pilihan donat 4 : ");
+                pilihanDonat = p.nextInt();
+            }
+    
+            kurangiStok(pilihanDonat); 
+            System.out.println("\n"); 
+            if(pilihanDonat >= 2 && pilihanDonat <= 8) {
+                topingDonat();
+                System.out.print("Silahkan masukkan toping yang anda inginkan : ");
+                pilihanToping = p.nextInt();
+                System.out.println("\n");
+            }
+
+            donatPromo++;
+        }
+        
+        if(donatPromo == 4) {
+            menuDonat();
+            System.out.print("Pilihan donat 5 : ");
+            pilihanDonat = p.nextInt();
+
+            // Exception handling pemilihan donat
+            while(pilihanDonat < 1 || pilihanDonat > 13) {
+                System.out.println("\nMohon pilih antara 1-13 !");
+                System.out.print("Pilihan donat 5 : ");
+                pilihanDonat = p.nextInt();
+            }
+
+            kurangiStok(pilihanDonat);   
+            System.out.println("\n");
+            if(pilihanDonat >= 2 && pilihanDonat <= 8) {
+                topingDonat();
+                System.out.print("Silahkan masukkan toping yang anda inginkan : ");
+                pilihanToping = p.nextInt();
+                System.out.println("\n");
+            }
+
+            donatPromo++;
+        }  
     }
 
     /*
