@@ -1,6 +1,6 @@
 /**
  * @author (M. Saifullah Sani)
- * @version (01/01/2021)
+ * @version (03/01/2021)
  */
 
 import java.util.Scanner;
