@@ -3,18 +3,20 @@
  * @version (1.0)
  */
  
+
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 
 public class Penyimpanan
 {
 
-    private HashMap<String, Integer> menuDonat;
-    private HashMap<String, Integer> menuDessert;
+    private static HashMap<String, Integer> menuDonat;
+    private static HashMap<String, Integer> menuDessert;
     private int stok;
-    private HashMap<String,Bon> simpanBon;
-    private int pemasukan;
-    private int modal;
-    private int untungRugi;
+    private ArrayList<Bon> simpanBon;
+    private Iterator<Bon> cekBon;
 
 
     public Penyimpanan()
@@ -22,7 +24,8 @@ public class Penyimpanan
         //membuat HashMap
         menuDonat = new HashMap<String, Integer>();
         menuDessert = new HashMap<String, Integer>();
-        simpanBon = new HashMap<String,Bon>();
+        //membuat ArrayList
+        simpanBon = new ArrayList<Bon>();
 
         setMenuDonat();
         setMenuDessert();
@@ -79,6 +82,7 @@ public class Penyimpanan
         }
     }
 
+
     // pengurangan Stok Donat
     public void kurangiStokDonat(String donat, int x)
     {
@@ -124,51 +128,20 @@ public class Penyimpanan
         return stok;
     }
 
-    public void tambahBon(String kodeTransaksi, Bon temp)
+ //menambahkan data ke dalam ArrayList
+    public void tambahBon(Bon bon)
     {
-        this.simpanBon.put(kodeTransaksi,temp);
+        this.simpanBon.add(bon);
     }
 
-    //menghitung total pemasukan
-    public void setPemasukan(int pemasukan)
+    // mencetak seluruh data dalam arraylist
+    public void cekBon(String nama)
     {
-        this.pemasukan += pemasukan ;
-    }
-
-    public void setModal(int modal)
-    {
-        this.modal = modal;
-    }
-
-    // menghitung keuntungan atau kerugian toko
-    public String getUntungRugi()
-    {
-        if (pemasukan>=modal){
-            untungRugi = pemasukan - modal;
-            return "keuntungan: " + untungRugi;
-        } else {
-            untungRugi = modal - pemasukan;
-            return "kerugian: " + untungRugi;
-        }
-    }
-
-    public int getPemasukan()
-    {
-        return pemasukan;
-    }
-
-    public int getModal()
-    {
-        return modal;
-    }
-
-
-    public void cetakBon(String kdTransaksi)
-    {
-        for (String i : simpanBon.keySet()){
-            if (i.equals(kdTransaksi)){
-                String value = simpanBon.get(i).toString();
-                System.out.println("Kode Transaksi: " + i + " " + value);
+        this.cekBon = this.simpanBon.iterator();
+        while (cekBon.hasNext()) {
+            Bon b = cekBon.next();
+            if (b.getNama().equalsIgnoreCase(nama)) {
+                b.toString();
             }
         }
     }
