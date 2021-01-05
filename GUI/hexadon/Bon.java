@@ -1,9 +1,13 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package hexadon;
 
 /**
  *
- * @author Mauriza Humaira 
- * @version 05-01-2021
+ * @author S_340
  */
 public class Bon extends javax.swing.JFrame {
 
@@ -23,10 +27,10 @@ public class Bon extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -37,128 +41,76 @@ public class Bon extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
-        jLabel1.setText("San Donuts And Cakes");
+        jLabel2.setText("SAN DONUTS AND CAKES");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(160, 20, 160, 16);
 
-        jLabel2.setText("Jl.");
+        jLabel3.setText("Jl. Glee Iniem - Aceh Besar");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(160, 40, 160, 16);
 
-        jLabel3.setText("Telp.");
+        jLabel4.setText("Telp. 081234567890");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(10, 540, 150, 16);
 
-        jLabel4.setText("Tgl");
+        jLabel5.setText("Tue, 05/01/2021 | 09:22:54 PM");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(140, 110, 190, 16);
 
-        jLabel6.setText("Kode Transaksi");
+        jLabel6.setText("@San_donutsandcakes");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(440, 540, 160, 16);
 
-        jLabel7.setText("Don8163");
+        jLabel7.setText("Kode Transaksi");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(70, 170, 110, 16);
 
-        jLabel8.setText("Nama Pelanggan");
+        jLabel8.setText("Don8163");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(380, 170, 170, 16);
 
-        jLabel9.setText("Saiful");
+        jLabel9.setText("Nama Pelanggan");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(70, 220, 100, 16);
 
-        jLabel10.setText("Total");
+        jLabel10.setText("Saiful");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(380, 220, 180, 16);
 
-        jLabel11.setText("Rp. 40.000");
+        jLabel11.setText("Total");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(70, 270, 29, 16);
 
         jLabel12.setText("Tunai");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(70, 310, 48, 16);
 
-        jLabel13.setText("Rp. 35.000");
+        jLabel13.setText("Kembalian");
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(70, 360, 70, 16);
 
-        jLabel14.setText("Kembalian");
+        jLabel14.setText("Rp. 40.000");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(380, 270, 160, 16);
 
-        jLabel15.setText("Rp. 5.000");
+        jLabel15.setText("Rp. 35.000");
+        getContentPane().add(jLabel15);
+        jLabel15.setBounds(380, 310, 150, 16);
 
-        jLabel5.setText("================================");
+        jLabel16.setText("Rp. 5.000");
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(380, 360, 150, 16);
 
-        jLabel16.setText("Arigatou-Dattebayou");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(116, 116, 116)
-                                        .addComponent(jLabel7))
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel15))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(84, 84, 84)
-                                .addComponent(jLabel16))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(72, 72, 72)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(123, 123, 123)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel3))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(132, 132, 132)
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5)
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel9))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel13))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel15))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
-                .addComponent(jLabel16)
-                .addContainerGap())
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/BG_Bon.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 600, 560);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

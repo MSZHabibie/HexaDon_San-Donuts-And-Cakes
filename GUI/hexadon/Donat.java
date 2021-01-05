@@ -1,9 +1,13 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package hexadon;
 
 /**
  *
- * @author Mauriza Humaira 
- * @version 05-01-2021
+ * @author S_340
  */
 public class Donat extends javax.swing.JFrame {
 
@@ -23,335 +27,213 @@ public class Donat extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        jButton8 = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
+        jButton10 = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
+        jButton11 = new javax.swing.JButton();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
+        jButton12 = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
+        jButton13 = new javax.swing.JButton();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButton5.setText("Donat Cokelat");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(20, 200, 213, 50);
+        jButton1.setText("Donat Gula");
+        getContentPane().add(jButton1);
+        jButton1.setBounds(160, 100, 220, 40);
 
-        jButton6.setText("Donat Cokelat Putih");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton6);
-        jButton6.setBounds(20, 270, 213, 50);
+        jLabel2.setText("10");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(390, 100, 14, 16);
 
-        jButton7.setText("Donat Matcha");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton7);
-        jButton7.setBounds(20, 340, 213, 50);
-
-        jButton15.setText("Donat Gula");
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton15);
-        jButton15.setBounds(20, 140, 213, 50);
-
-        jButton8.setText("Donat Tiramisu");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton8);
-        jButton8.setBounds(20, 540, 213, 50);
-
-        jButton9.setText("Donat Strawberry");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton9);
-        jButton9.setBounds(20, 410, 213, 50);
-
-        jButton10.setText("Donat Blueberry");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton10);
-        jButton10.setBounds(20, 470, 213, 50);
-
-        jButton14.setText("Donat Bomboloni Isi Strawberry");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton14);
-        jButton14.setBounds(20, 750, 213, 50);
-
-        jButton11.setText("Donat Cappuchino");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton11);
-        jButton11.setBounds(20, 610, 213, 50);
-
-        jButton12.setText("Donat Bomboloni Isi Cokelat");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton12);
-        jButton12.setBounds(20, 680, 213, 50);
-
-        jButton13.setText("Donat Bomboloni Isi Blueberry");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton13);
-        jButton13.setBounds(20, 820, 213, 50);
-
-        jButton16.setText("Donat Selai Strawberry");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton16);
-        jButton16.setBounds(20, 880, 213, 50);
-
-        jButton17.setText("Donat Selai Blueberry");
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton17);
-        jButton17.setBounds(20, 950, 213, 50);
-
-        jLabel3.setText("10");
+        jLabel3.setText("Rp. 2.000");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(370, 150, 12, 14);
+        jLabel3.setBounds(390, 120, 55, 16);
+
+        jButton2.setText("Donat Cokelat");
+        getContentPane().add(jButton2);
+        jButton2.setBounds(10, 150, 220, 40);
 
         jLabel4.setText("10");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(370, 220, 12, 14);
+        jLabel4.setBounds(240, 150, 14, 16);
 
-        jLabel5.setText("10");
+        jLabel5.setText("Rp. 2.500");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(370, 290, 12, 14);
+        jLabel5.setBounds(240, 170, 60, 16);
+
+        jButton3.setText("Donat Cokelat Putih");
+        getContentPane().add(jButton3);
+        jButton3.setBounds(310, 150, 210, 40);
 
         jLabel6.setText("10");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(370, 360, 12, 14);
+        jLabel6.setBounds(530, 150, 14, 16);
 
-        jLabel7.setText("10");
+        jLabel7.setText("Rp. 2.500");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(370, 430, 12, 14);
+        jLabel7.setBounds(530, 170, 55, 16);
+
+        jButton4.setText("Donat Matcha");
+        getContentPane().add(jButton4);
+        jButton4.setBounds(10, 200, 220, 40);
 
         jLabel8.setText("10");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(370, 490, 12, 14);
+        jLabel8.setBounds(240, 200, 14, 16);
 
-        jLabel9.setText("10");
+        jLabel9.setText("Rp. 2.500");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(370, 560, 12, 14);
+        jLabel9.setBounds(240, 220, 60, 16);
+
+        jButton5.setText("Donat Tiramisu");
+        getContentPane().add(jButton5);
+        jButton5.setBounds(310, 200, 210, 40);
 
         jLabel10.setText("10");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(370, 630, 12, 14);
+        jLabel10.setBounds(530, 200, 14, 16);
 
-        jLabel11.setText("10");
+        jLabel11.setText("Rp. 2.500");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(370, 700, 12, 14);
+        jLabel11.setBounds(530, 220, 60, 16);
+
+        jButton6.setText("Donat Strawberry");
+        getContentPane().add(jButton6);
+        jButton6.setBounds(10, 250, 220, 40);
 
         jLabel12.setText("10");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(370, 770, 12, 14);
+        jLabel12.setBounds(240, 250, 14, 16);
 
-        jLabel13.setText("10");
+        jLabel13.setText("Rp. 2.500");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(370, 830, 12, 14);
+        jLabel13.setBounds(240, 270, 60, 16);
+
+        jButton7.setText("Donat Blueberry");
+        getContentPane().add(jButton7);
+        jButton7.setBounds(310, 250, 210, 40);
 
         jLabel14.setText("10");
         getContentPane().add(jLabel14);
-        jLabel14.setBounds(370, 900, 12, 14);
+        jLabel14.setBounds(530, 250, 14, 16);
 
-        jLabel15.setText("10");
+        jLabel15.setText("Rp. 2.500");
         getContentPane().add(jLabel15);
-        jLabel15.setBounds(370, 970, 12, 14);
+        jLabel15.setBounds(530, 270, 60, 16);
 
-        jLabel17.setText("Rp. 2.000");
+        jButton8.setText("Donat Cappuchino");
+        getContentPane().add(jButton8);
+        jButton8.setBounds(10, 300, 220, 40);
+
+        jLabel16.setText("10");
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(240, 300, 14, 16);
+
+        jLabel17.setText("Rp. 2.500");
         getContentPane().add(jLabel17);
-        jLabel17.setBounds(520, 150, 48, 14);
+        jLabel17.setBounds(240, 320, 55, 16);
 
-        jLabel18.setText("Rp. 2.500");
+        jButton9.setText("Donat Bomboloni Isi Cokelat");
+        getContentPane().add(jButton9);
+        jButton9.setBounds(310, 300, 210, 40);
+
+        jLabel18.setText("10");
         getContentPane().add(jLabel18);
-        jLabel18.setBounds(520, 220, 48, 14);
+        jLabel18.setBounds(530, 300, 14, 16);
 
-        jLabel19.setText("Rp. 2.500");
+        jLabel19.setText("Rp. 3.000");
         getContentPane().add(jLabel19);
-        jLabel19.setBounds(520, 290, 48, 14);
+        jLabel19.setBounds(530, 320, 60, 16);
 
-        jLabel20.setText("Rp. 2.500");
+        jButton10.setText("Donat Bomboloni Isi Strawberry");
+        getContentPane().add(jButton10);
+        jButton10.setBounds(10, 360, 220, 40);
+
+        jLabel20.setText("10");
         getContentPane().add(jLabel20);
-        jLabel20.setBounds(520, 360, 48, 14);
+        jLabel20.setBounds(240, 360, 14, 16);
 
-        jLabel21.setText("Rp. 2.500");
+        jLabel21.setText("Rp. 3.000");
         getContentPane().add(jLabel21);
-        jLabel21.setBounds(520, 430, 48, 14);
+        jLabel21.setBounds(240, 380, 60, 16);
 
-        jLabel22.setText("Rp. 2.500");
+        jButton11.setText("Donat Bomboloni Isi Blueberry");
+        getContentPane().add(jButton11);
+        jButton11.setBounds(310, 360, 210, 40);
+
+        jLabel22.setText("10");
         getContentPane().add(jLabel22);
-        jLabel22.setBounds(520, 490, 48, 14);
+        jLabel22.setBounds(530, 360, 14, 16);
 
-        jLabel23.setText("Rp. 2.500");
+        jLabel23.setText("Rp. 3.000");
         getContentPane().add(jLabel23);
-        jLabel23.setBounds(520, 560, 48, 14);
+        jLabel23.setBounds(530, 380, 55, 16);
 
-        jLabel24.setText("Rp. 2.500");
+        jButton12.setText("Donat Selai Strawberry");
+        getContentPane().add(jButton12);
+        jButton12.setBounds(10, 420, 220, 40);
+
+        jLabel24.setText("10");
         getContentPane().add(jLabel24);
-        jLabel24.setBounds(520, 630, 48, 14);
+        jLabel24.setBounds(240, 420, 14, 16);
 
         jLabel25.setText("Rp. 3.000");
         getContentPane().add(jLabel25);
-        jLabel25.setBounds(520, 700, 48, 14);
+        jLabel25.setBounds(240, 440, 60, 16);
 
-        jLabel26.setText("Rp. 3.000");
+        jButton13.setText("Donat Selai Blueberry");
+        getContentPane().add(jButton13);
+        jButton13.setBounds(310, 420, 210, 40);
+
+        jLabel26.setText("10");
         getContentPane().add(jLabel26);
-        jLabel26.setBounds(520, 770, 48, 14);
+        jLabel26.setBounds(530, 420, 14, 16);
 
         jLabel27.setText("Rp. 3.000");
         getContentPane().add(jLabel27);
-        jLabel27.setBounds(520, 830, 48, 14);
+        jLabel27.setBounds(530, 440, 60, 16);
 
-        jLabel28.setText("Rp. 3.000");
-        getContentPane().add(jLabel28);
-        jLabel28.setBounds(520, 900, 48, 14);
-
-        jLabel29.setText("Rp. 3.000");
-        getContentPane().add(jLabel29);
-        jLabel29.setBounds(520, 970, 48, 14);
-
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/BG_Donat(1).jpg"))); // NOI18N
-        getContentPane().add(jLabel30);
-        jLabel30.setBounds(0, 0, 581, 0);
-
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/donat-final.jpg"))); // NOI18N
-        jLabel31.setText("jLabel31");
-        getContentPane().add(jLabel31);
-        jLabel31.setBounds(0, 0, 710, 1028);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/BG_Donat.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 600, 560);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton15ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
-
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
-
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
-
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
-
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
-
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
-
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16ActionPerformed
-
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton17ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -389,28 +271,31 @@ public class Donat extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -419,11 +304,7 @@ public class Donat extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
