@@ -2,51 +2,46 @@
   mauriza humaira
   */
 
-import java.time.LocalDate;
 
-
-public class Bon {
-
-    private String codeTransaksi;
+public class Bon
+{
+    private String tgl;
+    private String kodeTransaksi;
+    private String nama;
+    private int totalBiaya;
     private int jumlahUang;
     private int kembalian;
-    protected String nama;
-    private LocalDate tanggal;
-    private int totalBelanja;
+    private String feedback;
 
-    public Bon()
+    public Bon(String tgl, String kodeTransaksi, String nama, int totalBiaya, int jumlahUang, int kembalian, String feedback)
     {
-
-    }
-
-    public Bon(String nama,int totalBelanja, int jumlahUang, int kembalian)
-    {
-        tanggal = LocalDate.now();
+        this.tgl = tgl;
+        this.kodeTransaksi = kodeTransaksi;
         this.nama = nama;
-        this.totalBelanja = totalBelanja;//total harga belanjaan pelanggan
+        this.totalBiaya = totalBiaya;
         this.jumlahUang = jumlahUang;
         this.kembalian = kembalian;
-
+        this.feedback = feedback;
     }
 
-    public void setCodeTransaksi(String codeTransaksi)
+    public String getTgl()
     {
-        this.codeTransaksi = codeTransaksi;
+        return this.tgl;
     }
 
-    public void setJumlahUang(int jumlahUang)
+    public String getKodeTransaksi()
     {
-        this.jumlahUang = jumlahUang;
+        return this.kodeTransaksi;
     }
 
-    public void setKembalian(int kembalian)
+    public String getNama()
     {
-        this.kembalian = kembalian;
+        return this.nama;
     }
 
-    public String getCodeTransaksi()
+    public int getTotalBiaya()
     {
-        return this.codeTransaksi;
+        return this.totalBiaya;
     }
 
     public int getJumlahUang()
@@ -59,23 +54,20 @@ public class Bon {
         return this.kembalian;
     }
 
-    public void setNama(String nama)
+    public String getFeedback()
     {
-        this.nama = nama;
+        return this.feedback;
     }
 
-    public String getNama()
-    {
-        return this.nama;
-    }
-
-    public LocalDate tanggal()
-    {
-        return tanggal;
-    }
-
-    public String toString()
-    {
-        return "\n" + tanggal +"\n"+nama+"\n"+totalBelanja+"\n"+jumlahUang+"\n"+kembalian;
+    public String toString(){
+        return "\n\n    =========== BON ===========\n" +
+        "   " + this.tgl + "\n" +
+        "Kode Transaksi          : " + this.kodeTransaksi +
+        "Nama pelanggan          : " + this.nama +
+        "Total biaya belanjaan   : " + this.totalBiaya +
+        "Jumlah uang             : " + this.jumlahUang +
+        "Kembalian               : " + this.kembalian +
+        "Feedback                : " + this.feedback +
+        "\n\n";
     }
 }
