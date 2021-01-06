@@ -45,12 +45,17 @@ public class MenuUtama extends javax.swing.JFrame {
         jButton1.setBounds(200, 190, 200, 60);
 
         jButton2.setText("Donat");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
         jButton2.setBounds(200, 270, 200, 60);
 
         jButton3.setText("Desset Box");
         getContentPane().add(jButton3);
-        jButton3.setBounds(200, 350, 200, 70);
+        jButton3.setBounds(200, 340, 200, 70);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/BG_MenuUtama.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -65,6 +70,11 @@ public class MenuUtama extends javax.swing.JFrame {
         Promo p = new Promo();
         p.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        new Donat().setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

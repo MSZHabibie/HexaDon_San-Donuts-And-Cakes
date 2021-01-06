@@ -17,8 +17,8 @@ public class HexaDon {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        //Welcome masuk = new Welcome();
-        //masuk.setVisible(true);
+        Welcome masuk = new Welcome();
+        masuk.setVisible(true);
         
         //Transaksi t = new Transaksi();
         //t.setVisible(true);

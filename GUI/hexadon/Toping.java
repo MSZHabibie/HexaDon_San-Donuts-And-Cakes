@@ -35,6 +35,7 @@ public class Toping extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -42,7 +43,7 @@ public class Toping extends javax.swing.JFrame {
 
         jButton1.setText("Tanpa toping");
         getContentPane().add(jButton1);
-        jButton1.setBounds(50, 140, 210, 60);
+        jButton1.setBounds(50, 140, 210, 70);
 
         jButton2.setText("Kacang");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -51,11 +52,11 @@ public class Toping extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(330, 140, 220, 60);
+        jButton2.setBounds(50, 210, 210, 70);
 
         jButton3.setText("Kacang Almond");
         getContentPane().add(jButton3);
-        jButton3.setBounds(50, 210, 210, 70);
+        jButton3.setBounds(50, 350, 210, 80);
 
         jButton4.setText("Ceres");
         getContentPane().add(jButton4);
@@ -63,19 +64,28 @@ public class Toping extends javax.swing.JFrame {
 
         jButton5.setText("Crispy Ball Cokelat");
         getContentPane().add(jButton5);
-        jButton5.setBounds(50, 290, 210, 60);
+        jButton5.setBounds(50, 280, 210, 70);
 
         jButton6.setText("Sprinkle Warna");
         getContentPane().add(jButton6);
-        jButton6.setBounds(330, 290, 220, 60);
+        jButton6.setBounds(330, 350, 220, 70);
 
         jButton7.setText("Meses Warna");
         getContentPane().add(jButton7);
-        jButton7.setBounds(50, 360, 210, 70);
+        jButton7.setBounds(330, 280, 220, 70);
 
         jButton8.setText("Keju");
         getContentPane().add(jButton8);
-        jButton8.setBounds(330, 360, 220, 60);
+        jButton8.setBounds(330, 140, 220, 70);
+
+        jButton9.setText("➡");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton9);
+        jButton9.setBounds(490, 510, 90, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/BG_Toping.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -88,6 +98,10 @@ public class Toping extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        new Transaksi().setVisible(true);
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,6 +147,7 @@ public class Toping extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

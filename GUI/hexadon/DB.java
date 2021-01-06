@@ -63,11 +63,11 @@ public class DB extends javax.swing.JFrame {
 
         jLabel4.setText("Rp. 35.000");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(230, 170, 100, 16);
+        jLabel4.setBounds(230, 170, 100, 20);
 
         jLabel5.setText("Red Velvet");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(280, 210, 61, 16);
+        jLabel5.setBounds(280, 210, 75, 20);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         jLabel6.setText("10");
@@ -76,7 +76,7 @@ public class DB extends javax.swing.JFrame {
 
         jLabel7.setText("Rp. 35.000");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(460, 220, 90, 16);
+        jLabel7.setBounds(460, 220, 90, 20);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         jLabel9.setText("10");
@@ -85,11 +85,11 @@ public class DB extends javax.swing.JFrame {
 
         jLabel8.setText("Lotus");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(50, 264, 120, 16);
+        jLabel8.setBounds(50, 264, 120, 20);
 
         jLabel10.setText("Rp. 35.000");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(230, 270, 90, 16);
+        jLabel10.setBounds(230, 270, 90, 20);
 
         jLabel11.setText("Chocolate");
         getContentPane().add(jLabel11);
@@ -102,7 +102,7 @@ public class DB extends javax.swing.JFrame {
 
         jLabel13.setText("Rp. 35.000");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(460, 320, 80, 16);
+        jLabel13.setBounds(460, 320, 80, 20);
 
         jLabel14.setText("Cadburry");
         getContentPane().add(jLabel14);
@@ -115,27 +115,27 @@ public class DB extends javax.swing.JFrame {
 
         jLabel16.setText("Rp. 35.000");
         getContentPane().add(jLabel16);
-        jLabel16.setBounds(230, 370, 80, 16);
+        jLabel16.setBounds(230, 370, 80, 20);
 
         jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         getContentPane().add(jSpinner1);
-        jSpinner1.setBounds(170, 160, 34, 22);
+        jSpinner1.setBounds(170, 160, 37, 26);
 
         jSpinner2.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         getContentPane().add(jSpinner2);
-        jSpinner2.setBounds(400, 210, 34, 22);
+        jSpinner2.setBounds(400, 210, 37, 26);
 
         jSpinner3.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         getContentPane().add(jSpinner3);
-        jSpinner3.setBounds(180, 260, 34, 22);
+        jSpinner3.setBounds(180, 260, 37, 26);
 
         jSpinner4.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         getContentPane().add(jSpinner4);
-        jSpinner4.setBounds(410, 310, 34, 22);
+        jSpinner4.setBounds(410, 310, 37, 26);
 
         jSpinner5.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         getContentPane().add(jSpinner5);
-        jSpinner5.setBounds(170, 360, 34, 22);
+        jSpinner5.setBounds(170, 360, 37, 26);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/BG_DB.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");

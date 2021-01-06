@@ -6,10 +6,12 @@ package hexadon;
  */
 public class Welcome extends javax.swing.JFrame {
 
+    private String name;
     /**
      * Creates new form Welcome
      */
     public Welcome() {
+        name = " ";
         initComponents();
     }
 
@@ -23,7 +25,7 @@ public class Welcome extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        fieldNama = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -37,9 +39,14 @@ public class Welcome extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(20, 190, 41, 30);
 
-        jTextField1.setText(" ");
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(70, 190, 360, 30);
+        fieldNama.setText(" ");
+        fieldNama.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldNamaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(fieldNama);
+        fieldNama.setBounds(70, 190, 360, 30);
 
         jButton1.setText("Oke");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -70,10 +77,13 @@ public class Welcome extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    public String getNama(){
+        return this.name;
+    }
+            
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        jLabel2.setText("Happy Shopping " + jTextField1.getText() + " !");
+        jLabel2.setText("Happy Shopping " + fieldNama.getText() + " !");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -81,6 +91,11 @@ public class Welcome extends javax.swing.JFrame {
         MenuUtama mu = new MenuUtama();
         mu.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void fieldNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldNamaActionPerformed
+        // TODO add your handling code here:
+        name = String.valueOf(fieldNama.getText());
+    }//GEN-LAST:event_fieldNamaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -116,13 +131,13 @@ public class Welcome extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField fieldNama;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

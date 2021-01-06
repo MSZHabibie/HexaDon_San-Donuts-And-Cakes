@@ -49,63 +49,63 @@ public class Bon extends javax.swing.JFrame {
 
         jLabel2.setText("SAN DONUTS AND CAKES");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(160, 20, 160, 16);
+        jLabel2.setBounds(160, 20, 160, 20);
 
         jLabel3.setText("Jl. Glee Iniem - Aceh Besar");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(160, 40, 160, 16);
+        jLabel3.setBounds(160, 40, 160, 20);
 
         jLabel4.setText("Telp. 081234567890");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(10, 540, 150, 16);
+        jLabel4.setBounds(10, 540, 150, 20);
 
         jLabel5.setText("Tue, 05/01/2021 | 09:22:54 PM");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(140, 110, 190, 16);
+        jLabel5.setBounds(140, 110, 190, 20);
 
         jLabel6.setText("@San_donutsandcakes");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(440, 540, 160, 16);
+        jLabel6.setBounds(440, 540, 160, 20);
 
         jLabel7.setText("Kode Transaksi");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(70, 170, 110, 16);
+        jLabel7.setBounds(70, 170, 110, 20);
 
         jLabel8.setText("Don8163");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(380, 170, 170, 16);
+        jLabel8.setBounds(380, 170, 170, 20);
 
         jLabel9.setText("Nama Pelanggan");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(70, 220, 100, 16);
+        jLabel9.setBounds(70, 220, 130, 20);
 
         jLabel10.setText("Saiful");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(380, 220, 180, 16);
+        jLabel10.setBounds(380, 220, 180, 20);
 
         jLabel11.setText("Total");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(70, 270, 29, 16);
+        jLabel11.setBounds(70, 270, 36, 20);
 
         jLabel12.setText("Tunai");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(70, 310, 48, 16);
+        jLabel12.setBounds(70, 310, 48, 20);
 
         jLabel13.setText("Kembalian");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(70, 360, 70, 16);
+        jLabel13.setBounds(70, 360, 90, 20);
 
         jLabel14.setText("Rp. 40.000");
         getContentPane().add(jLabel14);
-        jLabel14.setBounds(380, 270, 160, 16);
+        jLabel14.setBounds(380, 270, 160, 20);
 
         jLabel15.setText("Rp. 35.000");
         getContentPane().add(jLabel15);
-        jLabel15.setBounds(380, 310, 150, 16);
+        jLabel15.setBounds(380, 310, 150, 20);
 
         jLabel16.setText("Rp. 5.000");
         getContentPane().add(jLabel16);
-        jLabel16.setBounds(380, 360, 150, 16);
+        jLabel16.setBounds(380, 360, 150, 20);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/BG_Bon.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
