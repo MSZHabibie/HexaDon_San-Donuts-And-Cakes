@@ -1,6 +1,6 @@
 # Biodata
 
-Chief Executif Officer :<br />
+Chief Executive Officer :<br />
   Nama : M. Syah Zichrullah Habibie<br />
   NPM  : 1908107010025<br />
 Chief Of GUI :<br />
