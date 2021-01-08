@@ -5,6 +5,8 @@
  */
 package hexadon;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author S_340
@@ -47,83 +49,95 @@ public class DB extends javax.swing.JFrame {
         jSpinner3 = new javax.swing.JSpinner();
         jSpinner4 = new javax.swing.JSpinner();
         jSpinner5 = new javax.swing.JSpinner();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        jLabel2.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jLabel2.setText("Turkish");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(50, 160, 110, 20);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Gill Sans MT", 0, 11)); // NOI18N
         jLabel3.setText("10");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(230, 156, 41, 10);
 
+        jLabel4.setFont(new java.awt.Font("Gill Sans MT", 0, 13)); // NOI18N
         jLabel4.setText("Rp. 35.000");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(230, 170, 100, 20);
+        jLabel4.setBounds(230, 176, 100, 10);
 
+        jLabel5.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jLabel5.setText("Red Velvet");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(280, 210, 75, 20);
+        jLabel5.setBounds(280, 210, 110, 22);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Gill Sans MT", 0, 11)); // NOI18N
         jLabel6.setText("10");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(460, 206, 12, 10);
 
+        jLabel7.setFont(new java.awt.Font("Gill Sans MT", 0, 13)); // NOI18N
         jLabel7.setText("Rp. 35.000");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(460, 220, 90, 20);
+        jLabel7.setBounds(460, 220, 90, 16);
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Gill Sans MT", 0, 11)); // NOI18N
         jLabel9.setText("10");
         getContentPane().add(jLabel9);
         jLabel9.setBounds(230, 256, 20, 14);
 
+        jLabel8.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jLabel8.setText("Lotus");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(50, 264, 120, 20);
+        jLabel8.setBounds(50, 264, 120, 22);
 
+        jLabel10.setFont(new java.awt.Font("Gill Sans MT", 0, 13)); // NOI18N
         jLabel10.setText("Rp. 35.000");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(230, 270, 90, 20);
+        jLabel10.setBounds(230, 276, 90, 10);
 
+        jLabel11.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jLabel11.setText("Chocolate");
         getContentPane().add(jLabel11);
         jLabel11.setBounds(280, 310, 110, 20);
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Gill Sans MT", 0, 11)); // NOI18N
         jLabel12.setText("10");
         getContentPane().add(jLabel12);
         jLabel12.setBounds(460, 306, 12, 10);
 
+        jLabel13.setFont(new java.awt.Font("Gill Sans MT", 0, 13)); // NOI18N
         jLabel13.setText("Rp. 35.000");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(460, 320, 80, 20);
+        jLabel13.setBounds(460, 326, 80, 10);
 
+        jLabel14.setFont(new java.awt.Font("Gill Sans MT", 0, 18)); // NOI18N
         jLabel14.setText("Cadburry");
         getContentPane().add(jLabel14);
         jLabel14.setBounds(50, 360, 110, 20);
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Gill Sans MT", 0, 11)); // NOI18N
         jLabel15.setText("10");
         getContentPane().add(jLabel15);
         jLabel15.setBounds(230, 356, 12, 10);
 
+        jLabel16.setFont(new java.awt.Font("Gill Sans MT", 0, 13)); // NOI18N
         jLabel16.setText("Rp. 35.000");
         getContentPane().add(jLabel16);
-        jLabel16.setBounds(230, 370, 80, 20);
+        jLabel16.setBounds(230, 376, 80, 10);
 
         jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         getContentPane().add(jSpinner1);
-        jSpinner1.setBounds(170, 160, 37, 26);
+        jSpinner1.setBounds(180, 160, 37, 26);
 
         jSpinner2.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         getContentPane().add(jSpinner2);
-        jSpinner2.setBounds(400, 210, 37, 26);
+        jSpinner2.setBounds(410, 210, 37, 26);
 
         jSpinner3.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         getContentPane().add(jSpinner3);
@@ -135,7 +149,27 @@ public class DB extends javax.swing.JFrame {
 
         jSpinner5.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         getContentPane().add(jSpinner5);
-        jSpinner5.setBounds(170, 360, 37, 26);
+        jSpinner5.setBounds(180, 360, 37, 26);
+
+        jButton1.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        jButton1.setText("Menu Utama");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(420, 420, 140, 50);
+
+        jButton2.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        jButton2.setText("Transaksi");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(420, 480, 140, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/BG_DB.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -144,6 +178,19 @@ public class DB extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        MenuUtama mu = new MenuUtama();
+        mu.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Selamat ! Anda mendapatkan promo beli minimal 3 dessert box dapat 5 donat gratis !");
+        Donat d = new Donat();
+        d.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,6 +228,8 @@ public class DB extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

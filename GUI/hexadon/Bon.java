@@ -43,29 +43,30 @@ public class Bon extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
         jLabel2.setText("SAN DONUTS AND CAKES");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(160, 20, 160, 20);
+        jLabel2.setBounds(160, 20, 200, 20);
 
         jLabel3.setText("Jl. Glee Iniem - Aceh Besar");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(160, 40, 160, 20);
+        jLabel3.setBounds(160, 40, 200, 20);
 
         jLabel4.setText("Telp. 081234567890");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(10, 540, 150, 20);
 
-        jLabel5.setText("Tue, 05/01/2021 | 09:22:54 PM");
+        jLabel5.setText("Thu, 07/01/2021 | 19:10:50 PM");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(140, 110, 190, 20);
+        jLabel5.setBounds(140, 110, 240, 20);
 
         jLabel6.setText("@San_donutsandcakes");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(440, 540, 160, 20);
+        jLabel6.setBounds(430, 540, 170, 20);
 
         jLabel7.setText("Kode Transaksi");
         getContentPane().add(jLabel7);
@@ -79,7 +80,7 @@ public class Bon extends javax.swing.JFrame {
         getContentPane().add(jLabel9);
         jLabel9.setBounds(70, 220, 130, 20);
 
-        jLabel10.setText("Saiful");
+        jLabel10.setText("Mauriza");
         getContentPane().add(jLabel10);
         jLabel10.setBounds(380, 220, 180, 20);
 
@@ -93,27 +94,38 @@ public class Bon extends javax.swing.JFrame {
 
         jLabel13.setText("Kembalian");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(70, 360, 90, 20);
+        jLabel13.setBounds(70, 350, 100, 20);
 
-        jLabel14.setText("Rp. 40.000");
+        jLabel14.setText("Rp. 105.000");
         getContentPane().add(jLabel14);
         jLabel14.setBounds(380, 270, 160, 20);
 
-        jLabel15.setText("Rp. 35.000");
+        jLabel15.setText("Rp. 110.000");
         getContentPane().add(jLabel15);
         jLabel15.setBounds(380, 310, 150, 20);
 
         jLabel16.setText("Rp. 5.000");
         getContentPane().add(jLabel16);
-        jLabel16.setBounds(380, 360, 150, 20);
+        jLabel16.setBounds(380, 350, 150, 20);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/BG_Bon.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 600, 560);
+        getContentPane().add(jDesktopPane1);
+        jDesktopPane1.setBounds(200, 120, 100, 100);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        //
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -151,6 +163,7 @@ public class Bon extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

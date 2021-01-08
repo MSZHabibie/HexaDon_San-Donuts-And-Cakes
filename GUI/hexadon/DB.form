@@ -27,6 +27,9 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gill Sans MT" size="18" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Turkish"/>
       </Properties>
       <Constraints>
@@ -38,7 +41,7 @@
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="11" style="0"/>
+          <Font name="Gill Sans MT" size="11" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="10"/>
       </Properties>
@@ -50,28 +53,34 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gill Sans MT" size="13" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Rp. 35.000"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="230" y="170" width="100" height="-1"/>
+          <AbsoluteConstraints x="230" y="176" width="100" height="10"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gill Sans MT" size="18" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Red Velvet"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="280" y="210" width="-1" height="-1"/>
+          <AbsoluteConstraints x="280" y="210" width="110" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="11" style="0"/>
+          <Font name="Gill Sans MT" size="11" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="10"/>
       </Properties>
@@ -83,6 +92,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gill Sans MT" size="13" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Rp. 35.000"/>
       </Properties>
       <Constraints>
@@ -94,7 +106,7 @@
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="11" style="0"/>
+          <Font name="Gill Sans MT" size="11" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="10"/>
       </Properties>
@@ -106,6 +118,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gill Sans MT" size="18" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Lotus"/>
       </Properties>
       <Constraints>
@@ -116,16 +131,22 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel10">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gill Sans MT" size="13" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Rp. 35.000"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="230" y="270" width="90" height="-1"/>
+          <AbsoluteConstraints x="230" y="276" width="90" height="10"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gill Sans MT" size="18" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Chocolate"/>
       </Properties>
       <Constraints>
@@ -137,7 +158,7 @@
     <Component class="javax.swing.JLabel" name="jLabel12">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="11" style="0"/>
+          <Font name="Gill Sans MT" size="11" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="10"/>
       </Properties>
@@ -149,16 +170,22 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel13">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gill Sans MT" size="13" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Rp. 35.000"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="460" y="320" width="80" height="-1"/>
+          <AbsoluteConstraints x="460" y="326" width="80" height="10"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel14">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gill Sans MT" size="18" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Cadburry"/>
       </Properties>
       <Constraints>
@@ -170,7 +197,7 @@
     <Component class="javax.swing.JLabel" name="jLabel15">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="11" style="0"/>
+          <Font name="Gill Sans MT" size="11" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="10"/>
       </Properties>
@@ -182,11 +209,14 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel16">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Gill Sans MT" size="13" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Rp. 35.000"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="230" y="370" width="80" height="-1"/>
+          <AbsoluteConstraints x="230" y="376" width="80" height="10"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -198,7 +228,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="170" y="160" width="-1" height="-1"/>
+          <AbsoluteConstraints x="180" y="160" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -210,7 +240,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="400" y="210" width="-1" height="-1"/>
+          <AbsoluteConstraints x="410" y="210" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -246,7 +276,39 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="170" y="360" width="-1" height="-1"/>
+          <AbsoluteConstraints x="180" y="360" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Comic Sans MS" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Menu Utama"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="420" y="420" width="140" height="50"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Comic Sans MS" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Transaksi"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="420" y="480" width="140" height="50"/>
         </Constraint>
       </Constraints>
     </Component>

@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package hexadon;
-import java.util.ArrayList;
 
 /**
  *
@@ -12,16 +11,10 @@ import java.util.ArrayList;
  */
 public class Donat extends javax.swing.JFrame {
 
-    private int jumlahDonat;
-    private int totalHarga;
-    private ArrayList<String> pesananDonat;
     /**
      * Creates new form Donat
      */
     public Donat() {
-        jumlahDonat = 0;
-        totalHarga = 0;
-        pesananDonat = new ArrayList<String>();
         initComponents();
     }
 
@@ -34,299 +27,285 @@ public class Donat extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGula = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        buttonCokelat = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        buttonCoklatPutih = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        buttonMatcha = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        buttonTiramisu = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        buttonStrawberry = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        buttonBlueberry = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        buttonCappuchino = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        buttonIsiCokelat = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        buttonIsiStrawberry = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        buttonIsiBlueberry = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        buttonSelaiStrawberry = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        buttonSelaiBlueberry = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        fieldJumlahPesanan = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        buttonGula.setText("Donat Gula");
-        buttonGula.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                buttonGulaMouseClicked(evt);
-            }
-        });
-        buttonGula.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonGulaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(buttonGula);
-        buttonGula.setBounds(160, 100, 220, 40);
-
-        jLabel2.setText("10");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(380, 100, 18, 20);
-
-        jLabel3.setText("Rp. 2.000");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(380, 120, 70, 20);
-
-        buttonCokelat.setText("Donat Cokelat");
-        buttonCokelat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonCokelatActionPerformed(evt);
-            }
-        });
-        getContentPane().add(buttonCokelat);
-        buttonCokelat.setBounds(10, 150, 220, 40);
-
-        jLabel4.setText("10");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(230, 150, 18, 20);
-
-        jLabel5.setText("Rp. 2.500");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(230, 170, 70, 20);
-
-        buttonCoklatPutih.setText("Donat Cokelat Putih");
-        buttonCoklatPutih.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonCoklatPutihActionPerformed(evt);
-            }
-        });
-        getContentPane().add(buttonCoklatPutih);
-        buttonCoklatPutih.setBounds(310, 150, 210, 40);
-
-        jLabel6.setText("10");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(520, 150, 18, 20);
-
-        jLabel7.setText("Rp. 2.500");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(520, 170, 70, 20);
-
-        buttonMatcha.setText("Donat Matcha");
-        buttonMatcha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonMatchaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(buttonMatcha);
-        buttonMatcha.setBounds(10, 200, 220, 40);
-
-        jLabel8.setText("10");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(230, 200, 18, 20);
-
-        jLabel9.setText("Rp. 2.500");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(230, 220, 70, 20);
-
-        buttonTiramisu.setText("Donat Tiramisu");
-        buttonTiramisu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonTiramisuActionPerformed(evt);
-            }
-        });
-        getContentPane().add(buttonTiramisu);
-        buttonTiramisu.setBounds(310, 200, 210, 40);
-
-        jLabel10.setText("10");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(520, 200, 18, 20);
-
-        jLabel11.setText("Rp. 2.500");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(520, 220, 70, 20);
-
-        buttonStrawberry.setText("Donat Strawberry");
-        buttonStrawberry.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonStrawberryActionPerformed(evt);
-            }
-        });
-        getContentPane().add(buttonStrawberry);
-        buttonStrawberry.setBounds(10, 250, 220, 40);
-
-        jLabel12.setText("10");
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(240, 250, 18, 20);
-
-        jLabel13.setText("Rp. 2.500");
-        getContentPane().add(jLabel13);
-        jLabel13.setBounds(230, 270, 70, 20);
-
-        buttonBlueberry.setText("Donat Blueberry");
-        buttonBlueberry.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonBlueberryActionPerformed(evt);
-            }
-        });
-        getContentPane().add(buttonBlueberry);
-        buttonBlueberry.setBounds(310, 250, 210, 40);
-
-        jLabel14.setText("10");
-        getContentPane().add(jLabel14);
-        jLabel14.setBounds(520, 250, 18, 20);
-
-        jLabel15.setText("Rp. 2.500");
-        getContentPane().add(jLabel15);
-        jLabel15.setBounds(520, 270, 70, 20);
-
-        buttonCappuchino.setText("Donat Cappuchino");
-        buttonCappuchino.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonCappuchinoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(buttonCappuchino);
-        buttonCappuchino.setBounds(10, 300, 220, 40);
-
-        jLabel16.setText("10");
-        getContentPane().add(jLabel16);
-        jLabel16.setBounds(230, 300, 18, 20);
-
-        jLabel17.setText("Rp. 2.500");
-        getContentPane().add(jLabel17);
-        jLabel17.setBounds(230, 320, 70, 20);
-
-        buttonIsiCokelat.setText("Bomboloni Isi Cokelat");
-        buttonIsiCokelat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonIsiCokelatActionPerformed(evt);
-            }
-        });
-        getContentPane().add(buttonIsiCokelat);
-        buttonIsiCokelat.setBounds(310, 300, 210, 40);
-
-        jLabel18.setText("10");
-        getContentPane().add(jLabel18);
-        jLabel18.setBounds(520, 300, 18, 20);
-
-        jLabel19.setText("Rp. 3.000");
-        getContentPane().add(jLabel19);
-        jLabel19.setBounds(520, 320, 70, 20);
-
-        buttonIsiStrawberry.setText("Bomboloni Isi Strawberry");
-        buttonIsiStrawberry.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonIsiStrawberryActionPerformed(evt);
-            }
-        });
-        getContentPane().add(buttonIsiStrawberry);
-        buttonIsiStrawberry.setBounds(10, 360, 220, 40);
-
-        jLabel20.setText("10");
-        getContentPane().add(jLabel20);
-        jLabel20.setBounds(230, 360, 18, 20);
-
-        jLabel21.setText("Rp. 3.000");
-        getContentPane().add(jLabel21);
-        jLabel21.setBounds(230, 380, 70, 20);
-
-        buttonIsiBlueberry.setText("Bomboloni Isi Blueberry");
-        buttonIsiBlueberry.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonIsiBlueberryActionPerformed(evt);
-            }
-        });
-        getContentPane().add(buttonIsiBlueberry);
-        buttonIsiBlueberry.setBounds(310, 360, 210, 40);
-
-        jLabel22.setText("10");
-        getContentPane().add(jLabel22);
-        jLabel22.setBounds(520, 360, 18, 20);
-
-        jLabel23.setText("Rp. 3.000");
-        getContentPane().add(jLabel23);
-        jLabel23.setBounds(520, 380, 70, 20);
-
-        buttonSelaiStrawberry.setText("Donat Selai Strawberry");
-        buttonSelaiStrawberry.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonSelaiStrawberryActionPerformed(evt);
-            }
-        });
-        getContentPane().add(buttonSelaiStrawberry);
-        buttonSelaiStrawberry.setBounds(10, 420, 220, 40);
-
-        jLabel24.setText("10");
-        getContentPane().add(jLabel24);
-        jLabel24.setBounds(230, 420, 18, 20);
-
-        jLabel25.setText("Rp. 3.000");
-        getContentPane().add(jLabel25);
-        jLabel25.setBounds(230, 440, 70, 20);
-
-        buttonSelaiBlueberry.setText("Donat Selai Blueberry");
-        buttonSelaiBlueberry.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonSelaiBlueberryActionPerformed(evt);
-            }
-        });
-        getContentPane().add(buttonSelaiBlueberry);
-        buttonSelaiBlueberry.setBounds(310, 420, 210, 40);
-
-        jLabel26.setText("10");
-        getContentPane().add(jLabel26);
-        jLabel26.setBounds(520, 420, 18, 20);
-
-        jLabel27.setText("Rp. 3.000");
-        getContentPane().add(jLabel27);
-        jLabel27.setBounds(520, 440, 70, 20);
-
-        jLabel28.setText("Jumlah pesanan Anda :");
-        getContentPane().add(jLabel28);
-        jLabel28.setBounds(160, 490, 190, 20);
-
-        fieldJumlahPesanan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldJumlahPesananActionPerformed(evt);
-            }
-        });
-        getContentPane().add(fieldJumlahPesanan);
-        fieldJumlahPesanan.setBounds(340, 490, 50, 26);
-
-        jButton1.setText("➡");
+        jButton1.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jButton1.setText("Donat Gula");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(490, 510, 90, 40);
+        jButton1.setBounds(160, 100, 220, 40);
+
+        jLabel2.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel2.setText("10");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(380, 100, 16, 19);
+
+        jLabel3.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel3.setText("Rp. 2.000");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(380, 120, 62, 19);
+
+        jButton2.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jButton2.setText("Donat Cokelat");
+        getContentPane().add(jButton2);
+        jButton2.setBounds(10, 150, 220, 40);
+
+        jLabel4.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel4.setText("10");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(230, 150, 16, 19);
+
+        jLabel5.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel5.setText("Rp. 2.500");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(230, 170, 70, 19);
+
+        jButton3.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jButton3.setText("Donat Cokelat Putih");
+        getContentPane().add(jButton3);
+        jButton3.setBounds(310, 150, 210, 40);
+
+        jLabel6.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel6.setText("10");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(520, 150, 16, 19);
+
+        jLabel7.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel7.setText("Rp. 2.500");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(520, 170, 62, 19);
+
+        jButton4.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jButton4.setText("Donat Matcha");
+        getContentPane().add(jButton4);
+        jButton4.setBounds(10, 200, 220, 40);
+
+        jLabel8.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel8.setText("10");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(230, 200, 16, 19);
+
+        jLabel9.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel9.setText("Rp. 2.500");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(230, 220, 70, 19);
+
+        jButton5.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jButton5.setText("Donat Tiramisu");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5);
+        jButton5.setBounds(310, 200, 210, 40);
+
+        jLabel10.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel10.setText("10");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(520, 200, 16, 19);
+
+        jLabel11.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel11.setText("Rp. 2.500");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(520, 220, 70, 19);
+
+        jButton6.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jButton6.setText("Donat Strawberry");
+        getContentPane().add(jButton6);
+        jButton6.setBounds(10, 250, 220, 40);
+
+        jLabel12.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel12.setText("10");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(230, 250, 16, 19);
+
+        jLabel13.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel13.setText("Rp. 2.500");
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(230, 270, 70, 19);
+
+        jButton7.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jButton7.setText("Donat Blueberry");
+        getContentPane().add(jButton7);
+        jButton7.setBounds(310, 250, 210, 40);
+
+        jLabel14.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel14.setText("10");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(520, 250, 16, 19);
+
+        jLabel15.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel15.setText("Rp. 2.500");
+        getContentPane().add(jLabel15);
+        jLabel15.setBounds(520, 270, 70, 19);
+
+        jButton8.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jButton8.setText("Donat Cappuchino");
+        getContentPane().add(jButton8);
+        jButton8.setBounds(10, 300, 220, 40);
+
+        jLabel16.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel16.setText("10");
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(230, 300, 16, 19);
+
+        jLabel17.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel17.setText("Rp. 2.500");
+        getContentPane().add(jLabel17);
+        jLabel17.setBounds(230, 320, 62, 19);
+
+        jButton9.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jButton9.setText("Bomboloni Isi Cokelat");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton9);
+        jButton9.setBounds(310, 300, 210, 40);
+
+        jLabel18.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel18.setText("10");
+        getContentPane().add(jLabel18);
+        jLabel18.setBounds(520, 300, 16, 19);
+
+        jLabel19.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel19.setText("Rp. 3.000");
+        getContentPane().add(jLabel19);
+        jLabel19.setBounds(520, 320, 62, 19);
+
+        jButton10.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jButton10.setText("Bomboloni Isi Strawberry");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton10);
+        jButton10.setBounds(10, 360, 220, 40);
+
+        jLabel20.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel20.setText("10");
+        getContentPane().add(jLabel20);
+        jLabel20.setBounds(230, 360, 16, 19);
+
+        jLabel21.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel21.setText("Rp. 3.000");
+        getContentPane().add(jLabel21);
+        jLabel21.setBounds(230, 380, 70, 19);
+
+        jButton11.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jButton11.setText(" Bomboloni Isi Blueberry");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton11);
+        jButton11.setBounds(310, 360, 210, 40);
+
+        jLabel22.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel22.setText("10");
+        getContentPane().add(jLabel22);
+        jLabel22.setBounds(520, 360, 16, 19);
+
+        jLabel23.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel23.setText("Rp. 3.000");
+        getContentPane().add(jLabel23);
+        jLabel23.setBounds(520, 380, 62, 19);
+
+        jButton12.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jButton12.setText("Donat Selai Strawberry");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton12);
+        jButton12.setBounds(10, 420, 220, 40);
+
+        jLabel24.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel24.setText("10");
+        getContentPane().add(jLabel24);
+        jLabel24.setBounds(230, 420, 16, 19);
+
+        jLabel25.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel25.setText("Rp. 3.000");
+        getContentPane().add(jLabel25);
+        jLabel25.setBounds(230, 440, 70, 19);
+
+        jButton13.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jButton13.setText("Donat Selai Blueberry");
+        getContentPane().add(jButton13);
+        jButton13.setBounds(310, 420, 210, 40);
+
+        jLabel26.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel26.setText("10");
+        getContentPane().add(jLabel26);
+        jLabel26.setBounds(520, 420, 16, 19);
+
+        jLabel27.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        jLabel27.setText("Rp. 3.000");
+        getContentPane().add(jLabel27);
+        jLabel27.setBounds(520, 440, 70, 19);
+
+        jButton14.setFont(new java.awt.Font("Comic Sans MS", 0, 16)); // NOI18N
+        jButton14.setText("Transaksi");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton14);
+        jButton14.setBounds(410, 500, 160, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/BG_Donat.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -335,116 +314,41 @@ public class Donat extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public int getJumlahDonat() {
-        return this.jumlahDonat;
-    }
-    
-    private void buttonIsiStrawberryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonIsiStrawberryActionPerformed
-        jumlahDonat++; 
-        fieldJumlahPesanan.setText(String.valueOf(jumlahDonat));
-    }//GEN-LAST:event_buttonIsiStrawberryActionPerformed
 
-    private void buttonGulaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonGulaMouseClicked
-        // TODO add your handling code here:
-        jumlahDonat++;
-    }//GEN-LAST:event_buttonGulaMouseClicked
-
-    private void fieldJumlahPesananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldJumlahPesananActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fieldJumlahPesananActionPerformed
-
-    private void buttonGulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGulaActionPerformed
-        // TODO add your handling code here:
-        jumlahDonat++;
-        pesananDonat.add("Gula");
-        totalHarga += 2000;
-        fieldJumlahPesanan.setText(String.valueOf(jumlahDonat));
-    }//GEN-LAST:event_buttonGulaActionPerformed
-
-    private void buttonCokelatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCokelatActionPerformed
-        jumlahDonat++; 
-        pesananDonat.add("Cokelat");
-        totalHarga += 2500;
-        fieldJumlahPesanan.setText(String.valueOf(jumlahDonat));
-    }//GEN-LAST:event_buttonCokelatActionPerformed
-
-    private void buttonCoklatPutihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCoklatPutihActionPerformed
-        jumlahDonat++; 
-        pesananDonat.add("Cokelat Putih");
-        totalHarga += 2500;
-        fieldJumlahPesanan.setText(String.valueOf(jumlahDonat));
-    }//GEN-LAST:event_buttonCoklatPutihActionPerformed
-
-    private void buttonMatchaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMatchaActionPerformed
-        jumlahDonat++; 
-        pesananDonat.add("Matcha");
-        totalHarga += 2500;
-        fieldJumlahPesanan.setText(String.valueOf(jumlahDonat));
-    }//GEN-LAST:event_buttonMatchaActionPerformed
-
-    private void buttonTiramisuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonTiramisuActionPerformed
-        jumlahDonat++; 
-        pesananDonat.add("Tiramisu");
-        totalHarga += 2500;
-        fieldJumlahPesanan.setText(String.valueOf(jumlahDonat));       
-    }//GEN-LAST:event_buttonTiramisuActionPerformed
-
-    private void buttonStrawberryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonStrawberryActionPerformed
-        jumlahDonat++; 
-        pesananDonat.add("Strawberry");
-        totalHarga += 2500;
-        fieldJumlahPesanan.setText(String.valueOf(jumlahDonat));
-    }//GEN-LAST:event_buttonStrawberryActionPerformed
-
-    private void buttonBlueberryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBlueberryActionPerformed
-        jumlahDonat++; 
-        pesananDonat.add("Blueberry");
-        totalHarga += 2500;
-        fieldJumlahPesanan.setText(String.valueOf(jumlahDonat));
-    }//GEN-LAST:event_buttonBlueberryActionPerformed
-
-    private void buttonCappuchinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCappuchinoActionPerformed
-        jumlahDonat++; 
-        pesananDonat.add("Cappuchino");
-        totalHarga += 2500;
-        fieldJumlahPesanan.setText(String.valueOf(jumlahDonat));
-    }//GEN-LAST:event_buttonCappuchinoActionPerformed
-
-    private void buttonIsiCokelatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonIsiCokelatActionPerformed
-        jumlahDonat++; 
-        pesananDonat.add("Bomboloni Isi Cokelat");
-        totalHarga += 3000;
-        fieldJumlahPesanan.setText(String.valueOf(jumlahDonat));
-    }//GEN-LAST:event_buttonIsiCokelatActionPerformed
-
-    private void buttonIsiBlueberryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonIsiBlueberryActionPerformed
-        jumlahDonat++; 
-        pesananDonat.add("Bomboloni Isi Blueberry");
-        totalHarga += 3000;
-        fieldJumlahPesanan.setText(String.valueOf(jumlahDonat));
-    }//GEN-LAST:event_buttonIsiBlueberryActionPerformed
-
-    private void buttonSelaiStrawberryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSelaiStrawberryActionPerformed
-        jumlahDonat++; 
-        pesananDonat.add("Selai Strawberry");
-        totalHarga += 3000;
-        fieldJumlahPesanan.setText(String.valueOf(jumlahDonat));
-    }//GEN-LAST:event_buttonSelaiStrawberryActionPerformed
-
-    private void buttonSelaiBlueberryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSelaiBlueberryActionPerformed
-        jumlahDonat++; 
-        pesananDonat.add("Selai Blueberry");
-        totalHarga += 3000;
-        fieldJumlahPesanan.setText(String.valueOf(jumlahDonat));
-    }//GEN-LAST:event_buttonSelaiBlueberryActionPerformed
-    
-    public int getTotalHarga() {
-        return totalHarga;
-    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new Toping().setVisible(true);
+        // TODO add your handling code here:
+        BanyakDonatTanpaToping bdtt = new BanyakDonatTanpaToping();
+        bdtt.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
-    
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        Transaksi t = new Transaksi();
+        t.setVisible(true);
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        BanyakDonatToping bdt = new BanyakDonatToping();
+        bdt.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -481,21 +385,20 @@ public class Donat extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonBlueberry;
-    private javax.swing.JButton buttonCappuchino;
-    private javax.swing.JButton buttonCokelat;
-    private javax.swing.JButton buttonCoklatPutih;
-    private javax.swing.JButton buttonGula;
-    private javax.swing.JButton buttonIsiBlueberry;
-    private javax.swing.JButton buttonIsiCokelat;
-    private javax.swing.JButton buttonIsiStrawberry;
-    private javax.swing.JButton buttonMatcha;
-    private javax.swing.JButton buttonSelaiBlueberry;
-    private javax.swing.JButton buttonSelaiStrawberry;
-    private javax.swing.JButton buttonStrawberry;
-    private javax.swing.JButton buttonTiramisu;
-    private javax.swing.JTextField fieldJumlahPesanan;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -516,7 +419,6 @@ public class Donat extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

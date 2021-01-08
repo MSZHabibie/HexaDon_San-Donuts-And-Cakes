@@ -6,12 +6,10 @@ package hexadon;
  */
 public class Welcome extends javax.swing.JFrame {
 
-    private String name;
     /**
      * Creates new form Welcome
      */
     public Welcome() {
-        name = " ";
         initComponents();
     }
 
@@ -25,29 +23,26 @@ public class Welcome extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        fieldNama = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 560));
         getContentPane().setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         jLabel1.setText("Nama");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(20, 190, 41, 30);
 
-        fieldNama.setText(" ");
-        fieldNama.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldNamaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(fieldNama);
-        fieldNama.setBounds(70, 190, 360, 30);
+        jTextField1.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
+        jTextField1.setText(" ");
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(70, 190, 360, 30);
 
+        jButton1.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         jButton1.setText("Oke");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,10 +52,12 @@ public class Welcome extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(450, 180, 100, 50);
 
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
         jLabel2.setText(" ");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(70, 280, 480, 30);
+        jLabel2.setBounds(70, 280, 480, 60);
 
+        jButton2.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         jButton2.setText("Lanjut");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,13 +74,10 @@ public class Welcome extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public String getNama(){
-        return this.name;
-    }
-            
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        jLabel2.setText("Happy Shopping " + fieldNama.getText() + " !");
+        jLabel2.setText("Happy Shopping " + jTextField1.getText() + " !");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -91,11 +85,6 @@ public class Welcome extends javax.swing.JFrame {
         MenuUtama mu = new MenuUtama();
         mu.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void fieldNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldNamaActionPerformed
-        // TODO add your handling code here:
-        name = String.valueOf(fieldNama.getText());
-    }//GEN-LAST:event_fieldNamaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,13 +120,13 @@ public class Welcome extends javax.swing.JFrame {
             }
         });
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField fieldNama;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

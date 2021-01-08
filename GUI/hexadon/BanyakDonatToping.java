@@ -9,12 +9,12 @@ package hexadon;
  *
  * @author S_340
  */
-public class MenuUtama extends javax.swing.JFrame {
+public class BanyakDonatToping extends javax.swing.JFrame {
 
     /**
-     * Creates new form MenuUtama
+     * Creates new form BanyakDonatToping
      */
-    public MenuUtama() {
+    public BanyakDonatToping() {
         initComponents();
     }
 
@@ -27,45 +27,52 @@ public class MenuUtama extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
+        jSpinner1 = new javax.swing.JSpinner();
+        jButton4 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButton1.setFont(new java.awt.Font("Segoe Print", 0, 24)); // NOI18N
-        jButton1.setText("Promo");
+        jLabel2.setText("Banyak donat ");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(40, 210, 140, 40);
+
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        getContentPane().add(jSpinner1);
+        jSpinner1.setBounds(180, 220, 37, 26);
+
+        jButton4.setText("Toping");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4);
+        jButton4.setBounds(310, 210, 130, 50);
+
+        jButton1.setText("Menu Donat");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(200, 190, 200, 60);
+        jButton1.setBounds(420, 420, 140, 40);
 
-        jButton2.setFont(new java.awt.Font("Segoe Print", 0, 24)); // NOI18N
-        jButton2.setText("Donat");
+        jButton2.setText("Transaksi");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(200, 270, 200, 60);
+        jButton2.setBounds(420, 470, 140, 40);
 
-        jButton3.setFont(new java.awt.Font("Segoe Print", 0, 24)); // NOI18N
-        jButton3.setText("Dessert Box");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(200, 350, 200, 70);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/BG_MenuUtama.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/BG_Donat.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 600, 560);
@@ -73,19 +80,20 @@ public class MenuUtama extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        Toping toping = new Toping();
+        toping.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Promo p = new Promo();
-        p.setVisible(true);
+        Donat d = new Donat();
+        d.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        new DB().setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        new Donat().setVisible(true);
+        new Transaksi().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -105,20 +113,20 @@ public class MenuUtama extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuUtama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BanyakDonatToping.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuUtama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BanyakDonatToping.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuUtama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BanyakDonatToping.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuUtama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BanyakDonatToping.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuUtama().setVisible(true);
+                new BanyakDonatToping().setVisible(true);
             }
         });
     }
@@ -126,7 +134,9 @@ public class MenuUtama extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JSpinner jSpinner1;
     // End of variables declaration//GEN-END:variables
 }

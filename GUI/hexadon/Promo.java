@@ -7,8 +7,7 @@ package hexadon;
 
 /**
  *
- * @author Mauriza Humaira
- * @version  06-01-2021
+ * @author S_340
  */
 public class Promo extends javax.swing.JFrame {
 
@@ -34,14 +33,15 @@ public class Promo extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButton1.setText("exit");
+        jButton1.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        jButton1.setText("Menu Utama");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(250, 490, 110, 40);
+        jButton1.setBounds(390, 450, 140, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/BG_Promo.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -53,7 +53,8 @@ public class Promo extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        new MenuUtama().setVisible(true);
+        MenuUtama mu = new MenuUtama();
+        mu.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
