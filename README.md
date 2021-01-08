@@ -3,7 +3,7 @@ HexaDon merupakan sebuah komunitas kecil yang berfokus pada pengembangan sebuah 
 
 Berikut collaborator tiap branch :<br />
 GUI - Mauriza Humaira<br />
-Main - M. Syah Zichrullah Habibie<br />
+Master - M. Syah Zichrullah Habibie<br />
 Pelayanan - M. Saifullah Sani<br />
 Penyimpanan - Sayidatul Sufur<br />
 Promo - Sausan Nabilah<br />
