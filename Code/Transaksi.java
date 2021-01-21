@@ -83,7 +83,7 @@ public class Transaksi
      */
     public void tambahBiaya(int banyak, int harga)
     {
-        this.biaya += banyak * harga;
+        this.biaya = banyak * harga;
     }
 
     /**
