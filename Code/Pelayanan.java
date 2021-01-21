@@ -1,6 +1,6 @@
 /**
  * @author (M. Saifullah Sani)
- * @version (03/01/2021)
+ * @version (21/01/2021)
  */
 
 import java.util.Scanner;
@@ -11,6 +11,8 @@ public class Pelayanan extends Penyimpanan
     private Transaksi transaksi;
     private Scanner in;
     private Scanner input;
+    private int beliBanyakDonat;
+    private int beliBanyakDB;
     private String feedback;
 
     public Pelayanan()
@@ -20,6 +22,8 @@ public class Pelayanan extends Penyimpanan
         transaksi = new Transaksi();
         in = new Scanner(System.in);
         input = new Scanner(System.in);
+        this.beliBanyakDonat = 0;
+        this.beliBanyakDB = 0;
         feedback = " ";
     }
 
@@ -32,7 +36,7 @@ public class Pelayanan extends Penyimpanan
         System.out.println("\t\t\t      ^_^\t SAN_DONUTSANDCAKES \t^_^");
         System.out.println("\t\t\t\t\t   🥯 🍩 🎂 🍰");
         System.out.println("\n\n\n");
-        System.out.print("Masukkan nama Anda : ");;
+        System.out.print("Masukkan nama Anda : ");
         transaksi.setNama(input.nextLine());
         System.out.println("\n\nHai " + transaksi.getNama() + " !\nSelamat datang di San Donuts And Cakes !\n");
 
@@ -41,15 +45,15 @@ public class Pelayanan extends Penyimpanan
         try {
             System.in.read();
         }
-        catch(Exception e) {}
+        catch(Exception e) {
+        }
 
         menuUtama();
     }
 
-    public int menuUtama()
+    public void menuUtama()
     {
         char beliLain = 'n';
-        int banyakDB = 0;
 
         // Main menu
         System.out.println("\nMenu utama :");
@@ -78,16 +82,17 @@ public class Pelayanan extends Penyimpanan
             try {
                 System.in.read();
             }
-            catch(Exception e) {}
+            catch(Exception e) {
+            }
 
             menuUtama();
-            return 0;
+            return;
         }
         else if(pilihan == 2) {
             pilihDonat();
         }
         else if(pilihan == 3) {
-            banyakDB += pilihDB();
+            pilihDB();
         }
 
         // Apa mw beli yg lain ?
@@ -102,11 +107,11 @@ public class Pelayanan extends Penyimpanan
 
         if(beliLain == 'y' || beliLain == 'Y') {
             menuUtama();
-            return 0;
+            return;
         }
 
         // Memeriksa dan menjalankan algoritma promo ketika pelanggan mendapatkan promo
-        transaksi.setBiaya(promo.cekPromo(banyakDB, transaksi.getBiaya()));
+        transaksi.setBiaya(promo.cekPromo(this.beliBanyakDB, transaksi.getBiaya()));
 
         // Proses transaksi sampai kembalian
         System.out.println("\nTotal biaya belanjaan Anda : Rp. " + transaksi.getBiaya());
@@ -136,12 +141,12 @@ public class Pelayanan extends Penyimpanan
         try {
             System.in.read();
         }
-        catch(Exception e) {}
+        catch(Exception e) {
+        }
 
 
         cetakBon();
         simpanBon();
-        return 0;
     }
 
     public void menuDonat()
@@ -221,18 +226,21 @@ public class Pelayanan extends Penyimpanan
             try {
                 System.in.read();
             }
-            catch(Exception e) {}
+            catch(Exception e) {
+            }
 
             pilihDonat();
         }
         else {
-            super.kurangiStokDonat(donat, banyak);
+            // Klo stok donat dpt mencukupi bnyk donat yg ingin dibeli, maka kurangi stok donat trsbt.
+            this.beliBanyakDonat = banyak;
+            super.kurangiStokDonat(donat, this.beliBanyakDonat);
         }
     }
 
-    // Pilih toping untuk donat tertentu
     public void pilihToping(int banyak)
     {
+        // Pilih toping untuk donat tertentu
         int pilihanToping = 0;
 
         // Menampilkan tampilan daftar toping untuk donat nomor 2 sampai 8
@@ -252,7 +260,7 @@ public class Pelayanan extends Penyimpanan
         } 
     }
 
-    public int pilihDonat()
+    public void pilihDonat()
     {        
         int banyak = 0;
         int pilihanDonat = 0;
@@ -275,7 +283,7 @@ public class Pelayanan extends Penyimpanan
         if(pilihanDonat == 0) {
             // Balik ke Main menu
             menuUtama();
-            return 0;
+            return;
         }
         else {
             // Banyak donat ini yang ingin dibeli
@@ -333,16 +341,14 @@ public class Pelayanan extends Penyimpanan
         
         // Hitung total biaya belanjaan donat
         if(pilihanDonat == 1) {
-            transaksi.tambahBiaya(banyak, 2000);
+            transaksi.tambahBiaya(this.beliBanyakDonat, 2000);
         }
         else if(pilihanDonat >= 2 && pilihanDonat <= 8) {
-            transaksi.tambahBiaya(banyak, 2500);
+            transaksi.tambahBiaya(this.beliBanyakDonat, 2500);
         }
         else {
-            transaksi.tambahBiaya(banyak, 3000);
+            transaksi.tambahBiaya(this.beliBanyakDonat, 3000);
         }
-
-        return 0;
     }
 
     public void menuDB()
@@ -369,7 +375,7 @@ public class Pelayanan extends Penyimpanan
     }
 
     public void cekStokDB(String db, int banyak)
-    {
+    {        
         if(banyak > super.getStokDessert(db)) {
             // Klo stok gk tersedia sebanyak diinginkan, lalu balik ke menu pilih dessert box
             System.out.println("Maaf, stok tidak tersedia !");
@@ -379,20 +385,22 @@ public class Pelayanan extends Penyimpanan
             try {
                 System.in.read();
             }
-            catch(Exception e) {}
-
+            catch(Exception e) {
+            }
+            
             pilihDB();
         }
         else {
-            super.kurangiStokDessert(db, banyak);
+            // Klo stok dessert box dpt mencukupi bnyk dessert box yg ingin dibeli, maka kurangi stok dessert box trsbt.
+            this.beliBanyakDB = banyak;
+            super.kurangiStokDessert(db, this.beliBanyakDB);
         }
     }
 
-    public int pilihDB()
+    public void pilihDB()
     {
         int banyak = 0;
         int pilihanDB = 0;
-        int banyakDB = 0;
 
         // Menampilkan daftar tampilan menu dessert box
         menuDB();
@@ -412,7 +420,7 @@ public class Pelayanan extends Penyimpanan
         if(pilihanDB == 0) {
             // Kembali ke main menu
             menuUtama();
-            return 0;
+            return;
         }
         else {
             // Banyak dessert box ini yang ingin dibeli
@@ -435,14 +443,10 @@ public class Pelayanan extends Penyimpanan
             else if(pilihanDB == 5) {
                 cekStokDB("Cadburry", banyak);
             }
-
-            banyakDB += banyak;
         }
 
         // Menghitung total biaya belanjaan dessert box
-        transaksi.tambahBiaya(banyak, 35000);
-
-        return banyakDB;
+        transaksi.tambahBiaya(this.beliBanyakDB, 35000);
     }
 
     public void penutup()
@@ -450,8 +454,7 @@ public class Pelayanan extends Penyimpanan
         System.out.println("\nSebaris feedback dari Anda sangat kami harapkan !");
         System.out.print("Feedback : ");
         this.feedback = input.nextLine();
-        //kasi kata kata yg keren dungz !
-        System.out.println("\n\nTerima kasih !\nDatang lagi yoo...\n");
+        System.out.println("\n\nTerima kasih !\nDatang lagi yaa...\n");
     }
 
     public void cetakBon()
@@ -470,27 +473,4 @@ public class Pelayanan extends Penyimpanan
     {
         super.tambahBon(new Bon(transaksi.getDate(), transaksi.getKodeTransaksi(), transaksi.getNama(), transaksi.getBiaya(), transaksi.getJumlahUang(), transaksi.kembalian(), this.feedback));
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
